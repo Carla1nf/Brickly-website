@@ -32,6 +32,7 @@ export default function Form () {
     return (
         <>
         <div className="font-bold text-2xl">Reserva tu lugar en Castelldefels</div>
+        <div className="font-normal text-gray-500">Lorem ipsum dolor sit amet consectetur adipiscing elit, consequat potenti etiam at</div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
             <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail" type="email" className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-100 fill-mode-forwards opacity-0"/>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-200 fill-mode-forwards opacity-0"/>
