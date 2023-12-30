@@ -39,7 +39,7 @@ export default function Form () {
             <input value={lastname} onChange={(e) => setLastname(e.target.value)} placeholder="Apellido" className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-300 fill-mode-forwards opacity-0"/>
             {success ? 
                 <Button className="bg-green-400 font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" color="tomato" type="submit" variant='soft' size='3' onClick={() => handleSubmit()} disabled={isSubmitting}>¡Revisa tu e-mail! </Button> : 
-                <Button className={`bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all ${isSubmitting ? "opacity-50" : ""}`} color="tomato" type="submit" variant='soft' size='3' onClick={() => handleSubmit()} disabled={isSubmitting}>Pre-registrarse {isSubmitting ?  <img src="universal/spinner.svg" width="25" className=" animate-spin"/>  : ""} </Button>
+                <Button className={`bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all ${isSubmitting ? "opacity-50" : ""}`} onClick={() => handleSubmit()} >Pre-registrarse {true ?  <img src="universal/spinner.svg" width="25" className=" animate-spin"/>  : ""} </Button>
               }
           
 
