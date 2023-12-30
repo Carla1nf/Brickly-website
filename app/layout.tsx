@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </div>
                   </div>
                 </div>
-                <div>&copy; 2024 Brick-ly</div>
+                <div>&copy; 2024 Brickly</div>
               </footer>
               </Theme>
 
