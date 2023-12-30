@@ -18,10 +18,10 @@ export default function Home() {
                             </div>
                             <p className="text-xl text-gray-600">desde 100 USD y recibe retornos  en tiempo real</p>
                             <div className="flex space-x-4">
-                                <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-12  cursor-pointer transition-all" >
+                                <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" >
                                     <a onClick={() => setFormActive(true)} href="#registrarse">Pre-registrarse</a>
                                 </Button>
-                                <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg transition-all text-white h-12  cursor-pointer">
+                                <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg transition-all text-white h-10  cursor-pointer">
 
                                     <span>Descubre como invertir</span>
                                 </Button>
@@ -31,7 +31,8 @@ export default function Home() {
                         <div className="flex space-x-4 md:ml-60 relative">
                             <div className='rounded-full bg-gradient-to-br relative from-orange-400/40 to-pink-400/40  h-96 w-96 '>
                                 
-                          
+                           
+
                                 <div className='w-44 rounded-xl flex gap-5 items-center justify-center animate-bounce-1 delay-500 bg-white shadow-2xl border-black absolute top-36 -left-10 h-16'>
                                     <div className='bg-orange-400 h-11 w-12 rounded '></div>
                                     <div className='flex flex-col'>

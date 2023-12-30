@@ -9,6 +9,7 @@ export default function Form () {
      const [name, setName] = useState("");   
      const [lastname, setLastname] = useState("");
      const [isSubmitting, setIsSubmitting] = useState(false);
+     const [success, setIsSuccess] = useState(false);
     
      const handleSubmit = async () => {
      setIsSubmitting(true);
@@ -19,8 +20,10 @@ export default function Form () {
          name: name,
          lastname: lastname,
      });
-     console.log(data);
      await new Promise(r => setTimeout(r, 1000));
+     setEmail("");
+     setName("");
+     setLastname("");
      setIsSubmitting(false);
      }
 
@@ -32,7 +35,10 @@ export default function Form () {
             <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail" type="email" className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-100 fill-mode-forwards opacity-0"/>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-200 fill-mode-forwards opacity-0"/>
             <input value={lastname}onChange={(e) => setLastname(e.target.value)} placeholder="Apellido" className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-300 fill-mode-forwards opacity-0"/>
-            <Button color="tomato" type="submit" variant='soft' size='3' onClick={() => handleSubmit()} disabled={isSubmitting}>Pre-registrarse</Button>
+            {success ? 
+                <Button className="bg-green-400 font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" color="tomato" type="submit" variant='soft' size='3' onClick={() => handleSubmit()} disabled={isSubmitting}>¡Revisa tu e-mail! </Button> : 
+                <Button className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" color="tomato" type="submit" variant='soft' size='3' onClick={() => handleSubmit()} disabled={isSubmitting}>Pre-registrarse</Button>
+              }
           
 
         </form>
