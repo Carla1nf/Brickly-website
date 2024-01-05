@@ -27,12 +27,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Theme>
             
         <Nav />
-      <main className="flex min-h-screen flex-col py-16 px-12 grow">{children}</main>
+      <main className="scroll-smooth flex min-h-screen flex-col py-16 sm:px-12 grow">{children}</main>
               <footer className="p-8 text-center h-72 bg-orange-50 ">
-                <div className="flex gap-10">
+                <div  id='footer' className="flex gap-10">
                   <img  src="/navbar/Brickly.svg" width="100"/>
                   <div className="flex">
-                    <div className="flex flex-col gap-y-2">
+                    <div className="flex flex-col sm:gap-y-2">
               
                     </div>
                   </div>

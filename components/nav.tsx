@@ -9,12 +9,12 @@ function Nav () {
 
   return (
     <nav className="flex items-center justify-between px-8">
-      <div className="flex flex-row items-center p-4">
+      <div className=" flex-row items-center p-4 md:flex hidden">
         <Link href="/" className=" w-[40vw]">
           <Image src="/navbar/Brickly.svg" height={50} width={90} alt="Dēbita" />
         </Link>
-        <Link className="px-6 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/5 font-semibold" href="/">
-          Quienes somos
+        <Link className="px-6 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/5 font-semibold" target="_blank" href="https://brickly.gitbook.io/brickly-informacion-web/team/meet-the-team">
+          Equipo
         </Link>
         <div className="px-6 text-center text-[14.5px] h-12 items-center grid font-semibold  hover:bg-slate-400/5" >
         <div className="relative inline-block text-left">
@@ -37,20 +37,13 @@ function Nav () {
   </div> : ""}
 </div>
         </div>
-        <Link className="px-6 text-center text-[14.5px] font-semibold h-12 items-center grid hover:bg-slate-400/5" href="/">
-          Marketplace
-        </Link>
-        <a
-          className="px-6 text-center text-[14.5px] font-semibold flex items-center gap-1 "
-          href="https://paintswap.finance/marketplace/fantom/collections/0xCD2A61Da5Ef804C3D55636335F9c7482282571Dc"
-          target="_blank"
-          rel="noreferrer nofollow"
-        >
+     
+        <Link className="px-4 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/5 font-semibold" href="#footer">
           Contacto
-        </a>
+        </Link>
       </div>
-      <Link className="px-4 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/5 font-semibold" href="/">
-        Invierte Ahora
+      <Link className="px-4 text-center text-[14.5px] h-12 items-center md:grid hidden hover:bg-slate-400/5 font-semibold" href="#registrarse">
+        Pre-registrate
       </Link>
       <div className="flex flex-row justify-between items-center p-4">
   

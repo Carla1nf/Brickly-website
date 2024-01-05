@@ -12,6 +12,14 @@ module.exports = {
     },
     extend: {
       colors: {
+        brickly50: "#fff4f1",
+        brickly100: "#ffe7e1",
+        brickly200: "#ffd2c7",
+        brickly400: "#FF977D",
+        brickly500: "#f8613b",
+        brickly600: "#e5451d",
+        brickly700: "#c13714",
+
       
   },
   keyframes: {
