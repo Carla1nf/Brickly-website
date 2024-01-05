@@ -88,9 +88,9 @@ export default function Home() {
   
 
             <div className='grid lg:grid-cols-2 lg:grid-rows-1 grid-rows-2 mt-20 items-center gap-16  '  id='registrarse'>
-                <div className='sm:p-8 justify-self-center relative '>
-                    <img height="400" width="440" className='shadow rounded-xl ' src='/Prueba.png' />
-                    <div className='bg-neutral-500/60 absolute sm:bottom-14 sm:left-16 bottom-0  left-0 sm:h-20  lg:w-[32vw] lg:max-w-[370px] w-[100vw] max-w-[370px] rounded-xl backdrop-blur-md flex flex-row  text-white '>
+                <div className='md:p-8 justify-self-center relative '>
+                    <img className='shadow max-h-[400px] h-[90vw] rounded-xl w-[90vw] max-w-[440px]' src='/Prueba.png' />
+                    <div className='bg-neutral-500/60 absolute md:bottom-14 md:left-16 bottom-0 right-0  left-0 sm:h-20  lg:w-[32vw] md:max-w-[370px] rounded-xl backdrop-blur-md flex flex-row  text-white '>
                         <div className='flex flex-col p-3 sm:scale-100 scale-[0.85]'> <div className='text-gray-100'>Inversión minima</div> <div className="font-bold flex items-end sm:h-20 content-end gap-2 "> <img width="24" src='/tokens/usdt.svg' /> 100 USDT</div> </div>
 
                         <div className='flex flex-col p-3 xl:ml-20 sm:ml-10 gap-2 sm:scale-100 scale-[0.85]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm: content-end gap-2 ">29d 12h 30m</div> </div>
