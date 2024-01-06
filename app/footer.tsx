@@ -41,7 +41,7 @@ export default function Component() {
           </div>
           <div className="flex items-center space-x-2 justify-center ">
             <img src="/universal/Whatsapp.svg" width="25" />
-            <span>+54 9 11 2473-415198</span>
+            <span>+54 9 2473-415198</span>
           </div>
         </div>
         <div className="space-y-4 flex flex-col">
