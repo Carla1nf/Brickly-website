@@ -38,7 +38,7 @@ export default function Form () {
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-200 fill-mode-forwards opacity-0"/>
             <input value={lastname} onChange={(e) => setLastname(e.target.value)} placeholder="Apellido" className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-300 fill-mode-forwards opacity-0"/>
             {success ? 
-                <Button className="bg-green-400 font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" color="tomato" variant='soft' size='3' disabled={isSubmitting}>¡Revisa tu e-mail! </Button> : 
+                <Button className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" color="tomato" variant='soft' size='3' disabled={isSubmitting}>¡Revisa tu e-mail! </Button> : 
                 <Button type="button" className={`bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all ${isSubmitting ? "opacity-50" : ""}`} onClick={() => handleSubmit()} >Pre-registrarse {isSubmitting ?  <img src="universal/spinner.svg" width="25" className=" animate-spin"/>  : ""} </Button>
               }
           
