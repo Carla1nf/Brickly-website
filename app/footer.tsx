@@ -27,16 +27,20 @@ export default function Component() {
             <Link href={bricklyLinkedin} target="_blank">
               <LinkedinIcon className="h-6 w-6" />
             </Link>
+
+            <Link href={"https://t.me/bricklytelegram"} target="_blank">
+              <img src="/universal/Telegram.svg" width="25" />
+            </Link>
           </div>
         </div>
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">Contáctanos</h3>
           <div className="flex items-center space-x-2 justify-center ">
             <MailIcon className="h-6 w-6" />
-            <span>ayuda@brick-ly.com</span>
+            <span>hola@brick-ly.com</span>
           </div>
           <div className="flex items-center space-x-2 justify-center ">
-            <PhoneIcon className="h-6 w-6" />
+            <img src="/universal/Whatsapp.svg" width="25" />
             <span>+54 9 11 2473-415198</span>
           </div>
         </div>
@@ -69,45 +73,9 @@ export default function Component() {
   )
 }
 
-function ArrowUpIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m5 12 7-7 7 7" />
-      <path d="M12 19V5" />
-    </svg>
-  )
-}
 
 
-function FacebookIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  )
-}
+
 
 
 function InstagramIcon(props: any) {
