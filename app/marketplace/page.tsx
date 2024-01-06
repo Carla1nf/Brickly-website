@@ -6,7 +6,7 @@ export default function Home() {
             <div className="max-w-9xl py-5 px-20 animate-enter-div">
       <div className="flex flex-col lg:flex-row justify-between items-start  space-y-4 lg:space-y-0 lg:space-x-8 ">
         <div>
-          <h1 className="text-4xl font-bold text-gray-900">Castelfelss Hotel - Habitación 1</h1>
+          <h1 className="text-4xl font-bold text-gray-900">Castelldefels Hotel - Habitación 1</h1>
           <div className="mt-1 text-base text-gray-600 flex gap-2">secured by Hotelier Services <img src="/home/Hotelier.svg" className="w-5"/> </div>
         </div>
         <div className="flex space-x-5 px-10">

@@ -30,8 +30,11 @@ export default function Home() {
                         </div>
 
                         <div className="flex space-x-4 xl:ml-60 lg:ml-44 md:ml-32 relative scale-[0.75] lg:scale-[0.95] xl:scale-[1] justify-center lg:justify-start">
-                            <div className='rounded-full bg-gradient-to-br relative from-orange-400/40 to-pink-400/40  h-96 w-96 '>
-                                
+                            <div className='rounded-full bg-gradient-to-br relative from-orange-400/40 to-pink-400/40  h-96 w-96  '>
+                                <div className='h-96 w-96 rounded-full py-10 overflow-hidden'>
+                                <img src="/home/Test.png" className='scale-[1.1]'/>
+
+                                </div>
                            
 
                                 <div className='w-44 rounded-xl flex gap-3 items-center justify-center animate-bounce-1 delay-500 bg-white shadow-2xl border-black absolute top-36 -left-10 h-16'>
@@ -94,7 +97,8 @@ export default function Home() {
                     <div className='bg-neutral-500/60 absolute md:bottom-14 md:left-16 bottom-0 right-0  left-0 sm:h-20  lg:w-[32vw] md:max-w-[370px] rounded-xl backdrop-blur-md flex flex-row  text-white '>
                         <div className='flex flex-col p-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Inversión minima</div> <div className="font-bold flex items-end sm:h-20 content-end gap-2 "> <img width="24" src='/tokens/usdt.svg' /> 100 USDT</div> </div>
 
-                        <div className='flex ml-10  flex-col p-3 xl:ml-20 sm:ml-10 gap-1 sm:gap-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm:content-end  text-sm "> 
+                        <div className='flex ml-10  flex-col p-3 xl:ml-15
+                        6 sm:ml-10 gap-1 sm:gap-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm:content-end  text-sm "> 
                         <CountdownTimer />
                         </div> </div>
                     </div>
