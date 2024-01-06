@@ -22,15 +22,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html className="scroll-smooth">
       <head>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-61MJXK5Z5K"></script>
-<script dangerouslySetInnerHTML={{__html: `
-  window.dataLayer = window.dataLayer || [];
+      <script src="https://www.googletagmanager.com/gtag/js?id=G-61MJXK5Z5K"></script>
+<script id="google-analytics" >
+
+  {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-61MJXK5Z5K');
-
-`}} >
+  gtag('config', 'G-61MJXK5Z5K');`}
 
 </script>
         <link rel="icon" type="image/svg+xml" href="/navbar/BricklyIcon.svg" />
