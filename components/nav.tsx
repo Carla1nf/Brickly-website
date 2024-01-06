@@ -12,7 +12,8 @@ function Nav () {
   const bricklyTelegram = "https://t.me/bricklytelegram";
   const bricklyTwitter = "https://twitter.com/BricklyApp";
   const bricklyInstagram = "https://www.instagram.com/brickly.app/";
-  const equipo = "https://brickly.gitbook.io/brickly/team/meet-the-team";
+  const equipo = "https://brickly.gitbook.io/brick-ly/team/meet-the-team";
+  const contacto = "https://brickly.gitbook.io/brickly-info/team/contacto";
 
   return (
     <nav className="flex items-center justify-between px-8">
@@ -37,7 +38,7 @@ function Nav () {
         <div className="mt-10 flex flex-col gap-5">
            <a onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href="#registrarse">Pre-registrate</a> 
            <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" target="_blank" href={equipo}>Equipo</Link> 
-           <a onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href="#footer">Contacto</a> 
+           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href={contacto} target="_blank">Contacto</Link> 
            <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href={bricklyTwitter} target="_blank">Twitter</Link> 
            <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay-75" href={bricklyInstagram} target="_blank">Instagram</Link> 
            <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay-100" href={bricklyTelegram} target="_blank">Telegram</Link>
@@ -75,9 +76,9 @@ function Nav () {
 </div>
         </div>
      
-        <a className="px-4 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/5 font-semibold" href="#footer">
+        <Link className="px-4 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/5 font-semibold" href={contacto} target="_blank">
           Contacto
-        </a>
+        </Link>
       </div>
     <a href="#registrarse" className="md:flex hidden"> 
     <Button content={" Pre-registrate"}  className="bg-black/30 rounded-xl">

@@ -3,6 +3,7 @@
 import Form from '@/components/form';
 import CountdownTimer from '@/components/ui/CountDown';
 import { Button } from '@radix-ui/themes';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export default function Home() {
@@ -22,10 +23,12 @@ export default function Home() {
                                 <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" >
                                     <a onClick={() => setFormActive(true)} href="#registrarse">Pre-registrarse</a>
                                 </Button>
+                                <Link href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web" target='_blank'>
                                 <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg transition-all text-white h-10  cursor-pointer">
 
                                     <span>Descubre como invertir</span>
                                 </Button>
+                                </Link>
                             </div>
                         </div>
 
@@ -128,8 +131,11 @@ export default function Home() {
                     </div>
                     <div className='sm:flex-row flex-col flex mt-3 gap-3'>
                         <Button onClick={() => setFormActive(true)} size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all w-40" >Pre-registrate </Button>
-
+                        
+                        <Link href="https://brickly.gitbook.io/brickly-info/guia-de-usuario/evaluacion-de-inmuebles/castelldefels" target='_blank'>
                         <Button  size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10 cursor-pointer transition-all w-52" >Mas información</Button>
+                        </Link>
+
                     </div>
                    </>
                    }

@@ -5,6 +5,7 @@ import Nav from "@/components/nav";
 import "@/styles/global.css";
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
+import Component from "./footer";
 
 
 const fontSans = FontSans({
@@ -28,16 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             
         <Nav />
       <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">{children}</main>
-              <footer className="p-8 text-center h-72 bg-orange-50 ">
-                <div  id='footer' className="flex gap-10">
-                  <img  src="/navbar/Brickly.svg" width="100"/>
-                  <div className="flex">
-                    <div className="flex flex-col sm:gap-y-2">
-              
-                    </div>
-                  </div>
-                </div>
-                <div>&copy; 2024 Brickly</div>
+              <footer className="p-8 text-center md:h-72 bg-orange-50 ">
+               <Component />
               </footer>
               </Theme>
 
