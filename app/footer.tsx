@@ -30,7 +30,7 @@ export default function Component() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Contact Us</h3>
+          <h3 className="text-lg font-semibold">Contáctanos</h3>
           <div className="flex items-center space-x-2 justify-center ">
             <MailIcon className="h-6 w-6" />
             <span>ayuda@brick-ly.com</span>
@@ -41,7 +41,7 @@ export default function Component() {
           </div>
         </div>
         <div className="space-y-4 flex flex-col">
-          <h3 className="text-lg font-semibold">Quick Links</h3>
+          <h3 className="text-lg font-semibold">Links</h3>
           <Link className="text-base hover:underline" href={equipo} target="_blank">
             Nosotros
           </Link>

@@ -20,11 +20,11 @@ export default function Home() {
                             </div>
                             <p className="sm:text-xl text-xs text-gray-600 md:w-auto">desde 100 USD y recibe retornos  en tiempo real</p>
                             <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
-                                <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" >
+                                <Button size='3' color='tomato' variant='soft' className="bg-black hover:bg-black/90  font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" >
                                     <a onClick={() => setFormActive(true)} href="#registrarse">Pre-registrarse</a>
                                 </Button>
                                
-                                <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg transition-all text-white h-10  cursor-pointer">
+                                <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg transition-all text-white h-10 hover:bg-black/90  cursor-pointer">
 
                                     <Link href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web" target='_blank'>Descubre como invertir</Link>
                                 </Button>
@@ -130,10 +130,10 @@ export default function Home() {
 
                     </div>
                     <div className='sm:flex-row flex-col flex mt-3 gap-3'>
-                        <Button onClick={() => setFormActive(true)} size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all w-40" >Pre-registrate </Button>
+                        <Button onClick={() => setFormActive(true)} size='3' color='tomato' variant='soft' className="bg-black  hover:bg-black/90 font-semibold rounded-lg text-white h-10  cursor-pointer transition-all w-40" >Pre-registrate </Button>
                         
                         <Link href="https://brickly.gitbook.io/brickly-info/guia-de-usuario/evaluacion-de-inmuebles/castelldefels" target='_blank'>
-                        <Button  size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10 cursor-pointer transition-all w-52" >Mas información</Button>
+                        <Button  size='3' color='tomato' variant='soft' className="bg-black hover:bg-black/90 font-semibold rounded-lg text-white h-10 cursor-pointer transition-all w-52" >Mas información</Button>
                         </Link>
 
                     </div>
