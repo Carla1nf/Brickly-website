@@ -23,12 +23,12 @@ export default function Home() {
                                 <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" >
                                     <a onClick={() => setFormActive(true)} href="#registrarse">Pre-registrarse</a>
                                 </Button>
-                                <Link href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web" target='_blank'>
+                               
                                 <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg transition-all text-white h-10  cursor-pointer">
 
-                                    <span>Descubre como invertir</span>
+                                    <Link href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web" target='_blank'>Descubre como invertir</Link>
                                 </Button>
-                                </Link>
+                                
                             </div>
                         </div>
 
