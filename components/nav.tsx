@@ -6,9 +6,44 @@ import React, { useState } from "react"
 
 function Nav () {
   const [isOpen, setIsOpen] = useState(false);
+  const [barActive, setBarActive] = useState(false);
+
+  const bricklyTelegram = "https://t.me/bricklytelegram";
+  const bricklyTwitter = "https://twitter.com/BricklyApp";
+  const bricklyInstagram = "https://www.instagram.com/brickly.app/";
 
   return (
     <nav className="flex items-center justify-between px-8">
+      <div className="flex md:hidden p-4 items-center w-full ">
+      <Link href="/" className=" w-[40vw] justify-self-start ">
+          <Image src="/navbar/Brickly.svg" height={50} width={90} alt="Dēbita" />
+        </Link>
+
+        <div className=" w-full justify-end flex">
+          <img src="/navbar/Bar.svg" width="30" className="cursor-pointer" onClick={() => setBarActive(true)}/>
+        </div>
+        {barActive ? 
+      <div className="flex flex-col py-5 px-5  fixed top-0 right-0 bottom-0 left-0 bg-white z-10"> 
+      <div className="flex justify-end">
+        <img src="/universal/back.svg" width="30" className="cursor-pointer justify-self-start" onClick={() => setBarActive(false)}/>
+        <div className="w-full px-10 flex justify-end animate-enter-div"> 
+        <Image src="/navbar/Brickly.svg" height={50} width={90} alt="Dēbita" />
+        </div>
+
+        </div>
+
+        <div className="mt-10 flex flex-col gap-5">
+           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href="#registrarse">Pre-registrate</Link> 
+           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" target="_blank" href="https://brickly.gitbook.io/brickly-informacion-web/team/meet-the-team">Equipo</Link> 
+           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href="#footer">Contacto</Link> 
+           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href={bricklyTwitter} target="_blank">Twitter</Link> 
+           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay-75" href={bricklyInstagram} target="_blank">Instagram</Link> 
+           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay-100" href={bricklyTelegram} target="_blank">Telegram</Link>
+          </div>
+      </div> : ""  
+      }
+
+      </div>
       <div className=" flex-row items-center p-4 md:flex hidden">
         <Link href="/" className=" w-[40vw]">
           <Image src="/navbar/Brickly.svg" height={50} width={90} alt="Dēbita" />
@@ -29,9 +64,9 @@ function Nav () {
  {isOpen ?
   <div className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" >
     <div className="py-1" role="none">
-      <a href="#" className="text-gray-700 hover:bg-gray-100 block px-4 py-2 text-sm" role="menuitem"  id="menu-item-0">Twitter</a>
-      <a href="#" className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm" role="menuitem"  id="menu-item-1">Instagram</a>
-      <a href="#" className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm" role="menuitem"  id="menu-item-1">Telegram</a>
+      <a href={bricklyTwitter} target="_blank" className="text-gray-700 hover:bg-gray-100 block px-4 py-2 text-sm" role="menuitem"  id="menu-item-0">Twitter</a>
+      <a href={bricklyInstagram} target="_blank" className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm" role="menuitem"  id="menu-item-1">Instagram</a>
+      <a href={bricklyTelegram} target="_blank" className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm" role="menuitem"  id="menu-item-1">Telegram</a>
      
     </div>
   </div> : ""}

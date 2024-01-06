@@ -1,6 +1,7 @@
 
 "use client"
 import Form from '@/components/form';
+import CountdownTimer from '@/components/ui/CountDown';
 import { Button } from '@radix-ui/themes';
 import React, { useState } from 'react';
 
@@ -89,11 +90,13 @@ export default function Home() {
 
             <div className='grid lg:grid-cols-2 lg:grid-rows-1 grid-rows-2 mt-20 items-center gap-16  '  id='registrarse'>
                 <div className='md:p-8 justify-self-center relative '>
-                    <img className='shadow max-h-[400px] h-[90vw] rounded-xl w-[90vw] max-w-[440px]' src='/Prueba.png' />
+                    <img className='shadow-2xl max-h-[400px] h-[90vw] rounded-xl w-[90vw] max-w-[440px]' src='/hotel-page/Base.png' />
                     <div className='bg-neutral-500/60 absolute md:bottom-14 md:left-16 bottom-0 right-0  left-0 sm:h-20  lg:w-[32vw] md:max-w-[370px] rounded-xl backdrop-blur-md flex flex-row  text-white '>
                         <div className='flex flex-col p-3 sm:scale-100 scale-[0.85]'> <div className='text-gray-100'>Inversión minima</div> <div className="font-bold flex items-end sm:h-20 content-end gap-2 "> <img width="24" src='/tokens/usdt.svg' /> 100 USDT</div> </div>
 
-                        <div className='flex flex-col p-3 xl:ml-20 sm:ml-10 gap-2 sm:scale-100 scale-[0.85]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm: content-end gap-2 ">29d 12h 30m</div> </div>
+                        <div className='flex flex-col p-3 xl:ml-20 sm:ml-10 gap-1 sm:gap-3 sm:scale-100 scale-[0.85]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm:content-end  text-sm "> 
+                        <CountdownTimer />
+                        </div> </div>
                     </div>
                 </div>
 
@@ -163,7 +166,7 @@ export default function Home() {
           </div>
           <div className='w-[450px] items-center justify-center flex relative bg-gradient-to-tr rounded-lg h-[450px] -mt-16'>
             <img className=' shadow-2xl lg:absolute'  src='/Prueba.png' width="350"/>
-            <img className='absolute shadow-2xl z-10 -bottom-10 -right-20 lg:block hidden'  src='/Prueba.png' width="350"/>
+            <img className='absolute shadow-2xl z-10 -bottom-10 -right-20 lg:block hidden rounded-xl'  src='/hotel-page/Example1.png' width="350"/>
 
           </div>
 
