@@ -92,9 +92,9 @@ export default function Home() {
                 <div className='md:p-8 justify-self-center relative '>
                     <img className='shadow-2xl max-h-[400px] h-[90vw] rounded-xl w-[90vw] max-w-[440px]' src='/hotel-page/Base.png' />
                     <div className='bg-neutral-500/60 absolute md:bottom-14 md:left-16 bottom-0 right-0  left-0 sm:h-20  lg:w-[32vw] md:max-w-[370px] rounded-xl backdrop-blur-md flex flex-row  text-white '>
-                        <div className='flex flex-col p-3 sm:scale-100 scale-[0.85]'> <div className='text-gray-100'>Inversión minima</div> <div className="font-bold flex items-end sm:h-20 content-end gap-2 "> <img width="24" src='/tokens/usdt.svg' /> 100 USDT</div> </div>
+                        <div className='flex flex-col p-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Inversión minima</div> <div className="font-bold flex items-end sm:h-20 content-end gap-2 "> <img width="24" src='/tokens/usdt.svg' /> 100 USDT</div> </div>
 
-                        <div className='flex flex-col p-3 xl:ml-20 sm:ml-10 gap-1 sm:gap-3 sm:scale-100 scale-[0.85]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm:content-end  text-sm "> 
+                        <div className='flex ml-10  flex-col p-3 xl:ml-20 sm:ml-10 gap-1 sm:gap-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm:content-end  text-sm "> 
                         <CountdownTimer />
                         </div> </div>
                     </div>
