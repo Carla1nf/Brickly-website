@@ -125,7 +125,7 @@ export default function Home() {
                     <div className='sm:flex-row flex-col flex mt-3 gap-3'>
                         <Button onClick={() => setFormActive(true)} size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all w-40" >Pre-registrate </Button>
 
-                        <Button  size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10  cursor-pointer transition-all w-40" >Mas información</Button>
+                        <Button  size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg text-white h-10 cursor-pointer transition-all w-52" >Mas información</Button>
                     </div>
                    </>
                    }

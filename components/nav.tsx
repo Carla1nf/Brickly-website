@@ -11,6 +11,7 @@ function Nav () {
   const bricklyTelegram = "https://t.me/bricklytelegram";
   const bricklyTwitter = "https://twitter.com/BricklyApp";
   const bricklyInstagram = "https://www.instagram.com/brickly.app/";
+  const equipo = "https://brickly.gitbook.io/brickly-informacion-web/team/meet-the-team";
 
   return (
     <nav className="flex items-center justify-between px-8">
@@ -34,7 +35,7 @@ function Nav () {
 
         <div className="mt-10 flex flex-col gap-5">
            <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href="#registrarse">Pre-registrate</Link> 
-           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" target="_blank" href="https://brickly.gitbook.io/brickly-informacion-web/team/meet-the-team">Equipo</Link> 
+           <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" target="_blank" href={equipo}>Equipo</Link> 
            <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href="#footer">Contacto</Link> 
            <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay" href={bricklyTwitter} target="_blank">Twitter</Link> 
            <Link onClick={() => setBarActive(false)} className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay-75" href={bricklyInstagram} target="_blank">Instagram</Link> 
@@ -48,7 +49,7 @@ function Nav () {
         <Link href="/" className=" w-[40vw]">
           <Image src="/navbar/Brickly.svg" height={50} width={90} alt="Dēbita" />
         </Link>
-        <Link className="px-6 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/5 font-semibold" target="_blank" href="https://brickly.gitbook.io/brickly-informacion-web/team/meet-the-team">
+        <Link className="px-6 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/5 font-semibold" target="_blank" href={equipo}>
           Equipo
         </Link>
         <div className="px-6 text-center text-[14.5px] h-12 items-center grid font-semibold  hover:bg-slate-400/5" >
