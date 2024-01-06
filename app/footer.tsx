@@ -4,7 +4,6 @@
  */
 import Link from "next/link"
 
-const bricklyTelegram = "https://t.me/bricklytelegram";
 const bricklyTwitter = "https://twitter.com/BricklyApp";
 const bricklyInstagram = "https://www.instagram.com/brickly.app/";
 const equipo = "https://brickly.gitbook.io/brickly-info/team/meet-the-team";
@@ -44,10 +43,10 @@ export default function Component() {
         <div className="space-y-4 flex flex-col">
           <h3 className="text-lg font-semibold">Quick Links</h3>
           <Link className="text-base hover:underline" href={equipo} target="_blank">
-            About Us
+            Nosotros
           </Link>
           <Link className="text-base hover:underline" href={servicios} target="_blank">
-            Services
+            Servicios
           </Link>
 
      
@@ -55,10 +54,10 @@ export default function Component() {
         <div className="space-y-4 flex flex-col">
           <h3 className="text-lg font-semibold">Legal</h3>
           <Link className="text-base hover:underline" href="https://brickly.gitbook.io/brickly-info/politicas/politicas-de-privacidad" target="_blank">
-            Privacy Policy
+           Política de privacidad
           </Link>
           <Link className="text-base hover:underline" href="https://brickly.gitbook.io/brickly-info/politicas/terminos-y-condiciones" target="_blank">
-            Terms of Service
+           Términos & condiciones
           </Link>
         </div>
       </div>
