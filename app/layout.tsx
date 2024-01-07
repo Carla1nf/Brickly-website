@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html className="scroll-smooth">
       <head>
-      <script src="https://www.googletagmanager.com/gtag/js?id=G-61MJXK5Z5K"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-61MJXK5Z5K"></script>
 <script id="google-analytics" >
 
   {`window.dataLayer = window.dataLayer || [];
