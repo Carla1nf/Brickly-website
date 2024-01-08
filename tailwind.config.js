@@ -39,6 +39,10 @@ module.exports = {
     "bounce-1": {
       "0%, 100%": { transform: "translateY(0%)" },
       "50%": { transform: "translateY(-15%)" },
+    },
+    "enter-checkout": {
+      "0%": {transform: "scaleX(0)"},
+      "100%": {transform: "scaleX(1)"}
     }
     
   },
@@ -48,6 +52,7 @@ module.exports = {
     "spin-slow": "spin 2.2s linear infinite",
     "rotate-180-cw": "rotate-180 0.08s linear",
     "bounce-1": "bounce-1 3s linear infinite",
+    "checkout": "enter-checkout 0.1s linear"
     
   },
   }},

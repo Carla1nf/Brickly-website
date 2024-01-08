@@ -11,28 +11,28 @@ export default function Home() {
     return (
         <div>
             <div className="bg-gradient-radial font-sans w-screen bg-[radial-gradient(50.40%_43.55%_at_50.66%_46.29%,rgba(255,98,28,0.2)_10%,rgba(255,255,255,1)_100%)] md:h-[70vh] h-auto">
-                <div className="md:h-[70vh] animate-enter-div">
-                    <div className="xl:ml-20 flex-col md:flex md:flex-row items-center">
-                        <div className="space-y-6 grid items-center text-center sm:text-start justify-center md:justify-start md:items-start">
-                            <div>
+                <div className="md:h-[70vh] animate-enter-div ">
+                    <div className="xl:ml-16 flex-col md:flex md:flex-row  items-center">
+                        <div className="space-y-6 grid items-center text-center sm:text-start justify-center md:justify-start md:items-start w-full">
+                            <div >
                                 <h1 className="sm:text-7xl min-[350px]:text-5xl text-4xl font-bold">Invierte en tu </h1>
                                 <h1 className="font-extrabold text-transparent sm:text-7xl min-[350px]:text-5xl text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">hotel favorito</h1>
                             </div>
                             <p className="sm:text-xl text-xs text-gray-600 md:w-auto">desde 100 USD y recibe retornos  en tiempo real</p>
                             <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
                                 <Button size='3' color='tomato' variant='soft' className="bg-black hover:bg-black/90  font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" >
-                                    <a onClick={() => setFormActive(true)} href="#registrarse">Pre-registrarse</a>
+                                    <a onClick={() => setFormActive(true)} href="#registrarse">Pre-registrate</a>
                                 </Button>
                                
-                                <Button size='3' color='tomato' variant='soft' className="bg-black font-semibold rounded-lg transition-all text-white h-10 hover:bg-black/90  cursor-pointer">
+                                <Button size='3' color='tomato' variant='soft' className="bg-black/0 font-semibold rounded-lg transition-all text-black h-10 cursor-pointer">
 
-                                    <Link href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web" target='_blank'>Descubre como invertir</Link>
+                                    <Link href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web" target='_blank'>Descubre cómo arrancar </Link>
                                 </Button>
                                 
                             </div>
                         </div>
 
-                        <div className="flex space-x-4 xl:ml-60 lg:ml-44 md:ml-32 relative scale-[0.75] lg:scale-[0.95] xl:scale-[1] justify-center lg:justify-start">
+                        <div className="flex lg:w-full lg:px-16 min-[1320px]:px-52 min-[1100px]:px-32 space-x-4 relative scale-[0.85] lg:scale-[1]   justify-center  lg:justify-end">
                             <div className='rounded-full bg-gradient-to-br relative from-orange-400/40 to-pink-400/40  h-96 w-96  '>
                                 <div className='h-96 w-96 rounded-full py-10 overflow-hidden'>
                                 <img src="/home/Test.png" className='scale-[1.1]'/>
@@ -72,7 +72,7 @@ export default function Home() {
             <div className='flex flex-col max-w-7xl mx-auto xl:ml-20 gap-10'>
                 <div className='font-semibold sm:text-3xl min-[350px]:text-2xl text-xl text-center sm:text-start '>Plataforma #1 de tokenización hotelera</div>
                 <div className='flex sm:flex-row flex-col sm:text-start text-center items-center gap-10'>
-                   {[["Internacional", "world", "bg-orange-50", "Inversión sin fronteras. Opera con hoteles en todo el mundo desde cualquier parte. Accedé a un mercado hotelero global."], ["Seguridad", "secure", "bg-red-50", "Contamos con un equipo legal especializado y un sistema de blockchain para garantizar la transparencia de tus operaciones."],["Rapidez", "shield", "bg-violet-50", "Mayor accesibilidad, sin burocracia, ni complicaciones. En no más de un minuto, ya puedes convertirte en un inversor global de hoteles."] , ["Solidez", "home", "bg-pink-50", "Garantizamos solidez jurídica y eficacia en cada inversión por medio de un sistema de tokenización respaldado por una LLC en EE. UU. "]].map((item) => {
+                   {[["Internacional", "world", "bg-orange-50", "Inversión sin fronteras. Opera con hoteles en todo el mundo desde cualquier parte. Accedé a un mercado hotelero global."], ["Seguridad", "secure", "bg-green-50", "Contamos con un equipo legal especializado y un sistema de blockchain para garantizar la transparencia de tus operaciones."],["Rapidez", "shield", "bg-violet-50", "Mayor accesibilidad, sin burocracia, ni complicaciones. En no más de un minuto, ya puedes convertirte en un inversor global de hoteles."] , ["Solidez", "home", "bg-pink-50", "Garantizamos solidez jurídica y eficacia en cada inversión por medio de un sistema de tokenización respaldado por una LLC en EE. UU. "]].map((item) => {
                     return (
                         <div className='h-72 w-64 bg-gradient-to-tr flex flex-col items-center sm:items-start gap-3'>
                         <div className={`p-4 h-20 w-20 rounded-full shadow-lg ${item[2]}`}>
@@ -98,7 +98,7 @@ export default function Home() {
                 <div className='md:p-8 justify-self-center relative '>
                     <img className='shadow-2xl max-h-[400px] h-[90vw] rounded-xl w-[90vw] max-w-[440px]' src='/hotel-page/Base.png' />
                     <div className='bg-neutral-500/60 absolute md:bottom-14 md:left-16 bottom-0 right-0  left-0 sm:h-20  lg:w-[32vw] md:max-w-[370px] rounded-xl backdrop-blur-md flex flex-row  text-white '>
-                        <div className='flex flex-col p-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Inversión minima</div> <div className="font-bold flex items-end sm:h-20 content-end gap-2 "> <img width="24" src='/tokens/usdt.svg' /> 100 USDT</div> </div>
+                        <div className='flex flex-col p-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Inversión minima</div> <div className="font-bold flex items-end sm:h-20 content-end gap-2 ">100 U$D</div> </div>
 
                         <div className='flex ml-10  flex-col p-3 xl:ml-15
                         6 sm:ml-10 gap-1 sm:gap-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm:content-end  text-sm "> 
@@ -115,14 +115,14 @@ export default function Home() {
                    </>
                    : 
                    <>
-                    <div className='font-bold  sm:text-3xl min-[350px]:text-2xl text-xl'>Castelldefels Hotel - Hab. 1</div>
+                    <div className='font-bold  sm:text-3xl min-[350px]:text-2xl text-xl'>Hoteles en preparación</div>
                     <div className='text-gray-400 sm:text-base text-sm w-[85vw] sm:w-auto'>Localizado en esta zona prestigiosa sobre la peatonal de Castelldefels y con una ubicación privilegiada a solo 120 metros del mar Mediterráneo, este hotel es una opción atractiva para aquellos que buscan invertir en el mercado hotelero en una zona turística de alta demanda.</div>
                     <div className='flex gap-4 items-end'> <div className='text-green-500 font-bold text-2xl '>8,32%</div> <div className='text-gray-500'>Retorno anual estimado</div> </div>
                     <div className='flex gap-5 animate-enter-div'>
-                        <div className='bg-orange-200 h-12 w-12 rounded-full'></div>
+                        <div className='bg-green-200 h-12 w-12 rounded-full'></div>
                         <div className='flex flex-col'>
                             <div className='text-gray-500'>Monto a recaudar</div>
-                            <div className='text-black font-bold text-lg -mt-1'>U$D10,000</div>
+                            <div className='text-black font-bold text-lg -mt-1'>200,000 U$D</div>
                             <div className="mt-3 sm:w-[340px] bg-gray-200 rounded-full dark:bg-gray-700">
                            <div className=" bg-gradient-to-r from-orange-400 to-pink-500 text-xs font-medium text-blue-100 text-center leading-none rounded-full w-0 h-2"></div>
                           </div>
@@ -133,7 +133,7 @@ export default function Home() {
                         <Button onClick={() => setFormActive(true)} size='3' color='tomato' variant='soft' className="bg-black  hover:bg-black/90 font-semibold rounded-lg text-white h-10  cursor-pointer transition-all w-40" >Pre-registrate </Button>
                         
                         <Link href="https://brickly.gitbook.io/brickly-info/guia-de-usuario/evaluacion-de-inmuebles/castelldefels" target='_blank'>
-                        <Button  size='3' color='tomato' variant='soft' className="bg-black hover:bg-black/90 font-semibold rounded-lg text-white h-10 cursor-pointer transition-all w-52" >Mas información</Button>
+                        <Button  size='3' color='tomato' variant='soft' className="bg-black/0  font-semibold rounded-lg text-black h-10 cursor-pointer transition-all w-52" >Mas información</Button>
                         </Link>
 
                     </div>
@@ -193,15 +193,17 @@ export default function Home() {
             <div className='flex flex-col sm:p-5 xl:ml-16  mt-10 gap-10'>
                 <div className='font-semibold text-3xl ml-1 text-center sm:text-start'>Nuestras alianzas</div>
                 <div className="flex sm:flex-row flex-col items-center sm:items-start"> 
-   {[["Hotelier Services", "España", "Con proyectos significativos en Argentina y España, junto con más de 20 años de experiencia en gestión hotelera nacional e internacional, Hotelier Services destaca en el análisis y viabilidad económica centrado en el desarrollo, comercialización y gestión de proyectos hoteleros y condo hoteles. "], ["Start Fellowship", "Suiza", "Impulsa y capacita a la próxima generación de empresarios para que todos tengan la oportunidad de estar en el lugar adecuado en el momento adecuado. A través de eventos anuales facilita conexiones entre jóvenes empresarios, inversores líderes y mentores globales."]].map((alianza, index) => {
+   {[["Hotelier Services", "España", "Con proyectos significativos en Argentina y España, junto con más de 20 años de experiencia en gestión hotelera nacional e internacional, Hotelier Services destaca en el análisis y viabilidad económica centrado en el desarrollo, comercialización y gestión de proyectos hoteleros y condo hoteles.", "https://hotelierservices.com/"], ["Start Fellowship", "Suiza", "Impulsa y capacita a la próxima generación de empresarios para que todos tengan la oportunidad de estar en el lugar adecuado en el momento adecuado. A través de eventos anuales facilita conexiones entre jóvenes empresarios, inversores líderes y mentores globales.", "https://www.startglobal.org/start-fellowship"]].map((alianza, index) => {
     return(
-      <div className={`sm:w-[350px] cursor-pointer relative flex flex-col ml-5 rounded-md sm:h-80  hover:bg-slate-300/20`}>
+    <a href={`${alianza[3]}`} target='_blank'>
+          <div className={`sm:w-[350px] cursor-pointer relative flex flex-col ml-5 rounded-md sm:h-80  hover:bg-slate-300/20`}>
         <div className=" w-20 text-center text-sm  grid items-center absolute right-10 bg-black rounded mt-5 text-white h-8">{alianza[1]}</div>
       <img height="90" width="90" className="p-4"  src={`${!index ? "/home/Hotelier.svg" : "/home/Start.svg"}`} />
       <div className="p-4 font-bold text-xl -mt-3">{alianza[0]}</div>
       <div className="p-4 font-semibold text-sm text-gray-400 -mt-3">{alianza[2]}</div>
   
       </div>
+    </a>
     )
    })}
    </div>

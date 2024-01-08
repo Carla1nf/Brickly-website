@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             
         <Nav />
       <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">{children}</main>
-              <footer className="p-8 text-center md:h-72 bg-orange-50 ">
+              <footer className="p-8 text-center lg:h-72 bg-brickly50/70 ">
                <Component />
               </footer>
               </Theme>

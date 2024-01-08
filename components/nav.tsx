@@ -80,14 +80,12 @@ function Nav () {
           Contacto
         </Link>
       </div>
-    <a href="#registrarse" className="md:flex hidden"> 
+    <a href="#registrarse" className="md:flex hidden px-6"> 
     <Button content={" Pre-registrate"}  className="bg-black/30 rounded-xl">
    
    </Button>
     </a>
-      <div className="flex flex-row justify-between items-center p-4">
-  
-      </div>
+     
     </nav>
   )
 }
