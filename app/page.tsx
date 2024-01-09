@@ -23,22 +23,22 @@ export default function Home() {
                                 <Button size='3' color='tomato' variant='soft' className="bg-black hover:bg-black/90  font-semibold rounded-lg text-white h-10  cursor-pointer transition-all" >
                                     <a onClick={() => setFormActive(true)} href="#registrarse">Pre-registrate</a>
                                 </Button>
-                               
+
                                 <Button size='3' color='tomato' variant='soft' className="bg-black/0 font-semibold rounded-lg transition-all text-black h-10 cursor-pointer">
 
                                     <Link href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web" target='_blank'>Descubre cómo arrancar </Link>
                                 </Button>
-                                
+
                             </div>
                         </div>
 
                         <div className="flex lg:w-full lg:px-16 min-[1320px]:px-52 min-[1100px]:px-32 space-x-4 relative scale-[0.85] lg:scale-[1]   justify-center  lg:justify-end">
                             <div className='rounded-full bg-gradient-to-br relative from-orange-400/40 to-pink-400/40  h-96 w-96  '>
                                 <div className='h-96 w-96 rounded-full py-10 overflow-hidden'>
-                                <img src="/home/Test.png" className='scale-[1.1]'/>
+                                    <img src="/home/Test.png" className='scale-[1.1]' />
 
                                 </div>
-                           
+
 
                                 <div className='w-44 rounded-xl flex gap-3 items-center justify-center animate-bounce-1 delay-500 bg-white shadow-2xl border-black absolute top-36 -left-10 h-16'>
                                     <div className='bg-orange-400 h-11 w-12 rounded grid items-center justify-center'>
@@ -56,7 +56,7 @@ export default function Home() {
 
                                     </div>
                                     <div className='flex flex-col'>
-                                    <div className='font-bold text-xl'>+4.1M</div>
+                                        <div className='font-bold text-xl'>+4.1M</div>
                                         <div className='text-gray-500 -mt-1'>Valor en activos</div>
                                     </div>
                                 </div>
@@ -68,145 +68,145 @@ export default function Home() {
                 </div>
             </div>
 
-          
+
             <div className='flex flex-col max-w-7xl mx-auto xl:ml-20 gap-10'>
                 <div className='font-semibold sm:text-3xl min-[350px]:text-2xl text-xl text-center sm:text-start '>Plataforma #1 de tokenización hotelera</div>
                 <div className='flex sm:flex-row flex-col sm:text-start text-center items-center gap-10'>
-                   {[["Internacional", "world", "bg-orange-50", "Inversión sin fronteras. Opera con hoteles en todo el mundo desde cualquier parte. Accedé a un mercado hotelero global."], ["Seguridad", "secure", "bg-green-50", "Contamos con un equipo legal especializado y un sistema de blockchain para garantizar la transparencia de tus operaciones."],["Rapidez", "shield", "bg-violet-50", "Mayor accesibilidad, sin burocracia, ni complicaciones. En no más de un minuto, ya puedes convertirte en un inversor global de hoteles."] , ["Solidez", "home", "bg-pink-50", "Garantizamos solidez jurídica y eficacia en cada inversión por medio de un sistema de tokenización respaldado por una LLC en EE. UU. "]].map((item) => {
-                    return (
-                        <div className='h-72 w-64 bg-gradient-to-tr flex flex-col items-center sm:items-start gap-3'>
-                        <div className={`p-4 h-20 w-20 rounded-full shadow-lg ${item[2]}`}>
-                        <img  src={`/home/icons/${item[1]}.svg`} height="200" width="100" />
-                        </div>
-                        <div className='p-2 font-bold text-lg'>{item[0]}</div>
-                        <div className='p-2 text-gray-400 text-sm font-normal'>{item[3]}</div>
+                    {[["Internacional", "world", "bg-orange-50", "Inversión sin fronteras. Opera con hoteles en todo el mundo desde cualquier parte. Accedé a un mercado hotelero global."], ["Seguridad", "secure", "bg-green-50", "Contamos con un equipo legal especializado y un sistema de blockchain para garantizar la transparencia de tus operaciones."], ["Rapidez", "shield", "bg-violet-50", "Mayor accesibilidad, sin burocracia, ni complicaciones. En no más de un minuto, ya puedes convertirte en un inversor global de hoteles."], ["Solidez", "home", "bg-pink-50", "Garantizamos solidez jurídica y eficacia en cada inversión por medio de un sistema de tokenización respaldado por una LLC en EE. UU. "]].map((item) => {
+                        return (
+                            <div className='h-72 w-64 bg-gradient-to-tr flex flex-col items-center sm:items-start gap-3'>
+                                <div className={`p-4 h-20 w-20 rounded-full shadow-lg ${item[2]}`}>
+                                    <img src={`/home/icons/${item[1]}.svg`} height="200" width="100" />
+                                </div>
+                                <div className='p-2 font-bold text-lg'>{item[0]}</div>
+                                <div className='p-2 text-gray-400 text-sm font-normal'>{item[3]}</div>
 
-                    </div>
+                            </div>
 
-                    )
-                   })}
-                  
+                        )
+                    })}
 
-         
+
+
                 </div>
 
             </div>
-           
-  
 
-            <div className='grid lg:grid-cols-2 lg:grid-rows-1 grid-rows-2 mt-20 items-center gap-16  '  id='registrarse'>
+
+
+            <div className='grid lg:grid-cols-2 lg:grid-rows-1 grid-rows-2 mt-20 items-center gap-16  ' id='registrarse'>
                 <div className='md:p-8 justify-self-center relative '>
                     <img className='shadow-2xl max-h-[400px] h-[90vw] rounded-xl w-[90vw] max-w-[440px]' src='/hotel-page/Base.png' />
                     <div className='bg-neutral-500/60 absolute md:bottom-14 md:left-16 bottom-0 right-0  left-0 sm:h-20  lg:w-[32vw] md:max-w-[370px] rounded-xl backdrop-blur-md flex flex-row  text-white '>
                         <div className='flex flex-col p-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Inversión minima</div> <div className="font-bold flex items-end sm:h-20 content-end gap-2 ">100 U$D</div> </div>
 
                         <div className='flex ml-10  flex-col p-3 xl:ml-15
-                        6 sm:ml-10 gap-1 sm:gap-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm:content-end  text-sm "> 
-                        <CountdownTimer />
-                        </div> </div>
+                        6 sm:ml-10 gap-1 sm:gap-3 sm:scale-100 scale-[0.90]'> <div className='text-gray-100'>Empieza en</div> <div className="font-bold flex items-end sm:content-end  text-sm ">
+                                <CountdownTimer />
+                            </div> </div>
                     </div>
                 </div>
 
                 <div className='flex flex-col gap-6 max-w-[460px] lg:justify-self-start text-center items-center  lg:items-start justify-self-center lg:text-start'>
-                   {formActive ? 
-                   <>
-                   <img onClick={() => setFormActive(false)} src='/universal/back.svg' className=' cursor-pointer absolute -mt-10' width='23'/>
-                    <Form />
-                   </>
-                   : 
-                   <>
-                    <div className='font-bold  sm:text-3xl min-[350px]:text-2xl text-xl'>Hoteles en preparación</div>
-                    <div className='text-gray-400 sm:text-base text-sm w-[85vw] sm:w-auto'>Localizado en esta zona prestigiosa sobre la peatonal de Castelldefels y con una ubicación privilegiada a solo 120 metros del mar Mediterráneo, este hotel es una opción atractiva para aquellos que buscan invertir en el mercado hotelero en una zona turística de alta demanda.</div>
-                    <div className='flex gap-4 items-end'> <div className='text-green-500 font-bold text-2xl '>8,32%</div> <div className='text-gray-500'>Retorno anual estimado</div> </div>
-                    <div className='flex gap-5 animate-enter-div'>
-                        <div className='bg-green-200 h-12 w-12 rounded-full'></div>
-                        <div className='flex flex-col'>
-                            <div className='text-gray-500'>Monto a recaudar</div>
-                            <div className='text-black font-bold text-lg -mt-1'>200,000 U$D</div>
-                            <div className="mt-3 sm:w-[340px] bg-gray-200 rounded-full dark:bg-gray-700">
-                           <div className=" bg-gradient-to-r from-orange-400 to-pink-500 text-xs font-medium text-blue-100 text-center leading-none rounded-full w-0 h-2"></div>
-                          </div>
-                        </div>
+                    {formActive ?
+                        <>
+                            <img onClick={() => setFormActive(false)} src='/universal/back.svg' className=' cursor-pointer absolute -mt-10' width='23' />
+                            <Form />
+                        </>
+                        :
+                        <>
+                            <div className='font-bold  sm:text-3xl min-[350px]:text-2xl text-xl'>Hoteles en preparación</div>
+                            <div className='text-gray-400 sm:text-base text-sm w-[85vw] sm:w-auto'>Localizado en esta zona prestigiosa sobre la peatonal de Castelldefels y con una ubicación privilegiada a solo 120 metros del mar Mediterráneo, este hotel es una opción atractiva para aquellos que buscan invertir en el mercado hotelero en una zona turística de alta demanda.</div>
+                            <div className='flex gap-4 items-end'> <div className='text-green-500 font-bold text-2xl '>8,32%</div> <div className='text-gray-500'>Retorno anual estimado</div> </div>
+                            <div className='flex gap-5 animate-enter-div'>
+                                <div className='bg-green-600 h-12 w-12 rounded-full'></div>
+                                <div className='flex flex-col'>
+                                    <div className='text-gray-500'>Monto a recaudar</div>
+                                    <div className='text-black font-bold text-lg -mt-1'>200,000 U$D</div>
+                                    <div className="mt-3 sm:w-[340px] bg-gray-200 rounded-full dark:bg-gray-700">
+                                        <div className=" bg-gradient-to-r from-orange-400 to-pink-500 text-xs font-medium text-blue-100 text-center leading-none rounded-full w-0 h-2"></div>
+                                    </div>
+                                </div>
 
-                    </div>
-                    <div className='sm:flex-row flex-col flex mt-3 gap-3'>
-                        <Button onClick={() => setFormActive(true)} size='3' color='tomato' variant='soft' className="bg-black  hover:bg-black/90 font-semibold rounded-lg text-white h-10  cursor-pointer transition-all w-40" >Pre-registrate </Button>
-                        
-                        <Link href="https://brickly.gitbook.io/brickly-info/guia-de-usuario/evaluacion-de-inmuebles/castelldefels" target='_blank'>
-                        <Button  size='3' color='tomato' variant='soft' className="bg-black/0  font-semibold rounded-lg text-black h-10 cursor-pointer transition-all w-52" >Mas información</Button>
-                        </Link>
+                            </div>
+                            <div className='sm:flex-row flex-col flex mt-3 gap-3'>
+                                <Button onClick={() => setFormActive(true)} size='3' color='tomato' variant='soft' className="bg-black  hover:bg-black/90 font-semibold rounded-lg text-white h-10  cursor-pointer transition-all w-40" >Pre-registrate </Button>
 
-                    </div>
-                   </>
-                   }
-                   
+                                <Link href="https://brickly.gitbook.io/brickly-info/guia-de-usuario/evaluacion-de-inmuebles/castelldefels" target='_blank'>
+                                    <Button size='3' color='tomato' variant='soft' className="bg-black/0  font-semibold rounded-lg text-black h-10 cursor-pointer transition-all w-52" >Mas información</Button>
+                                </Link>
 
-                
+                            </div>
+                        </>
+                    }
+
+
+
 
 
                 </div>
 
             </div>
 
-           <div className='flex flex-col xl:p-5 xl:ml-16 items-center lg:items-start  mt-16 gap-10 text-center sm:text-start'>
-          <div className=' font-semibold sm:text-3xl min-[350px]:text-2xl text-xl  '>Beneficios de tokenización</div>
-          <div className='-mt-8 text-gray-500 text-sm sm:text-base'>No es necesario ser un profesional para invertir como uno</div>
-          <div className='flex flex-col gap-10'>
-          <div className='flex lg:flex-row flex-col items-center lg:items-start lg:gap-3 gap-16'>
-          <div className='xl:w-[600px] w-[550px] bg-gradient-to-tr rounded-lg  h-[400px]'>
-            <div className='flex flex-col items-center lg:items-start h-[400px] p-3 gap-3'>
-           {[["Acceso Global:", "Diversifica tu cartera con proyectos exclusivos conectando con destinos únicos y rentables en todo el mundo."],["Seguridad Jurídica:", "Confiabilidad y seguridad jurídica respaldada con transparencia."],["Rendimiento Sostenible:", "Carteras duraderas para maximizar tu éxito financiero a largo plazo."]].map((item) => {
-            return(
-                <div className='p-1 font-bold text-xl flex flex-col w-[400px] gap-2 '>
-                <div className='flex items-center  justify-center lg:justify-start gap-4'>
-                    
-                <div className='p-3 h-12 w-12 rounded-full bg-orange-50 shadow-lg'>
-                 <img src='/home/icons/chart.svg' height="200" width="100"/>
+            <div className='flex flex-col xl:p-5 xl:ml-16 items-center lg:items-start  mt-16 gap-10 text-center sm:text-start'>
+                <div className=' font-semibold sm:text-3xl min-[350px]:text-2xl text-xl  '>Beneficios de tokenización</div>
+                <div className='-mt-8 text-gray-500 text-sm sm:text-base'>No es necesario ser un profesional para invertir como uno</div>
+                <div className='flex flex-col gap-10'>
+                    <div className='flex lg:flex-row flex-col items-center lg:items-start lg:gap-3 gap-16'>
+                        <div className='xl:w-[600px] w-[550px] bg-gradient-to-tr rounded-lg  h-[400px]'>
+                            <div className='flex flex-col items-center lg:items-start h-[400px] p-3 gap-3'>
+                                {[["Acceso Global:", "Diversifica tu cartera con proyectos exclusivos conectando con destinos únicos y rentables en todo el mundo."], ["Seguridad Jurídica:", "Confiabilidad y seguridad jurídica respaldada con transparencia."], ["Rendimiento Sostenible:", "Carteras duraderas para maximizar tu éxito financiero a largo plazo."]].map((item) => {
+                                    return (
+                                        <div className='p-1 font-bold text-xl flex flex-col w-[400px] gap-2 '>
+                                            <div className='flex items-center  justify-center lg:justify-start gap-4'>
+
+                                                <div className="bg-green-600 h-7 w-7 rounded-full shadow flex items-center justify-center -ml-2 z-10 animate-enter-div">
+                                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/thin_with_steps-svg1.svg" alt="check" />
+                                                </div>
+                                                <div className='font-semibold'>{item[0]}</div>
+                                            </div>
+                                            <div className='text-sm text-gray-500 p-1 font-normal'>{item[1]}</div>
+
+                                        </div>
+                                    )
+                                })}
+
+
+                            </div>
+                        </div>
+                        <div className='w-[450px] items-center justify-center flex relative bg-gradient-to-tr rounded-lg h-[450px] -mt-16'>
+                            <img className=' shadow-2xl lg:absolute' src='/Prueba.png' width="350" />
+                            <img className='absolute shadow-2xl z-10 -bottom-10 -right-20 lg:block hidden rounded-xl' src='/hotel-page/Example1.png' width="350" />
+
+                        </div>
+
                     </div>
-                    <div className='font-semibold'>{item[0]}</div>
-                    </div>
-                <div className='text-sm text-gray-500 p-1 font-normal'>{item[1]}</div>
 
+
+
+
+
+                </div>
             </div>
-            )
-           })}
-          
 
-            </div>
-          </div>
-          <div className='w-[450px] items-center justify-center flex relative bg-gradient-to-tr rounded-lg h-[450px] -mt-16'>
-            <img className=' shadow-2xl lg:absolute'  src='/Prueba.png' width="350"/>
-            <img className='absolute shadow-2xl z-10 -bottom-10 -right-20 lg:block hidden rounded-xl'  src='/hotel-page/Example1.png' width="350"/>
-
-          </div>
-
-          </div>
-          
-          
-            
-            
-
-          </div>
-           </div>
-            
 
             <div className='flex flex-col sm:p-5 xl:ml-16  mt-10 gap-10'>
                 <div className='font-semibold text-3xl ml-1 text-center sm:text-start'>Nuestras alianzas</div>
-                <div className="flex sm:flex-row flex-col items-center sm:items-start"> 
-   {[["Hotelier Services", "España", "Con proyectos significativos en Argentina y España, junto con más de 20 años de experiencia en gestión hotelera nacional e internacional, Hotelier Services destaca en el análisis y viabilidad económica centrado en el desarrollo, comercialización y gestión de proyectos hoteleros y condo hoteles.", "https://hotelierservices.com/"], ["Start Fellowship", "Suiza", "Impulsa y capacita a la próxima generación de empresarios para que todos tengan la oportunidad de estar en el lugar adecuado en el momento adecuado. A través de eventos anuales facilita conexiones entre jóvenes empresarios, inversores líderes y mentores globales.", "https://www.startglobal.org/start-fellowship"]].map((alianza, index) => {
-    return(
-    <a href={`${alianza[3]}`} target='_blank'>
-          <div className={`sm:w-[350px] cursor-pointer relative flex flex-col ml-5 rounded-md sm:h-80  hover:bg-slate-300/20`}>
-        <div className=" w-20 text-center text-sm  grid items-center absolute right-10 bg-black rounded mt-5 text-white h-8">{alianza[1]}</div>
-      <img height="90" width="90" className="p-4"  src={`${!index ? "/home/Hotelier.svg" : "/home/Start.svg"}`} />
-      <div className="p-4 font-bold text-xl -mt-3">{alianza[0]}</div>
-      <div className="p-4 font-semibold text-sm text-gray-400 -mt-3">{alianza[2]}</div>
-  
-      </div>
-    </a>
-    )
-   })}
-   </div>
+                <div className="flex sm:flex-row flex-col items-center sm:items-start">
+                    {[["Hotelier Services", "España", "Con proyectos significativos en Argentina y España, junto con más de 20 años de experiencia en gestión hotelera nacional e internacional, Hotelier Services destaca en el análisis y viabilidad económica centrado en el desarrollo, comercialización y gestión de proyectos hoteleros y condo hoteles.", "https://hotelierservices.com/"], ["Start Fellowship", "Suiza", "Impulsa y capacita a la próxima generación de empresarios para que todos tengan la oportunidad de estar en el lugar adecuado en el momento adecuado. A través de eventos anuales facilita conexiones entre jóvenes empresarios, inversores líderes y mentores globales.", "https://www.startglobal.org/start-fellowship"]].map((alianza, index) => {
+                        return (
+                            <a href={`${alianza[3]}`} target='_blank'>
+                                <div className={`sm:w-[350px] cursor-pointer relative flex flex-col ml-5 rounded-md sm:h-80  hover:bg-slate-300/20`}>
+                                    <div className=" w-20 text-center text-sm  grid items-center absolute right-10 bg-black rounded mt-5 text-white h-8">{alianza[1]}</div>
+                                    <img height="90" width="90" className="p-4" src={`${!index ? "/home/Hotelier.svg" : "/home/Start.svg"}`} />
+                                    <div className="p-4 font-bold text-xl -mt-3">{alianza[0]}</div>
+                                    <div className="p-4 font-semibold text-sm text-gray-400 -mt-3">{alianza[2]}</div>
+
+                                </div>
+                            </a>
+                        )
+                    })}
+                </div>
 
             </div>
         </div>
