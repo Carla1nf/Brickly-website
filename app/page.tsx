@@ -212,7 +212,7 @@ export default function Home() {
                 </Button>
 
                 <Link
-                  href="https://brickly.gitbook.io/brickly-info/guia-de-usuario/evaluacion-de-inmuebles/castelldefels"
+                  href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/evaluacion-de-inmuebles"
                   target="_blank"
                 >
                   <Button
