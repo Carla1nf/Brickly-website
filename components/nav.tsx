@@ -155,33 +155,56 @@ function Nav() {
                 aria-labelledby="menu-button"
               >
                 <div className="py-1" role="none">
-                  <a
-                    href={bricklyTwitter}
-                    target="_blank"
-                    className="text-gray-700 hover:bg-gray-100 block px-4 py-2 text-sm"
-                    role="menuitem"
-                    id="menu-item-0"
-                  >
-                    Twitter
-                  </a>
-                  <a
-                    href={bricklyInstagram}
-                    target="_blank"
-                    className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm"
-                    role="menuitem"
-                    id="menu-item-1"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href={bricklyTelegram}
-                    target="_blank"
-                    className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm"
-                    role="menuitem"
-                    id="menu-item-1"
-                  >
-                    Telegram
-                  </a>
+                  <div className="flex w-full hover:bg-gray-100 items-center px-3">
+                    <img src="/universal/twitter.svg" width="20" />
+                    <a
+                      href={bricklyTwitter}
+                      target="_blank"
+                      className="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      id="menu-item-0"
+                    >
+                      Twitter
+                    </a>
+                  </div>
+                  <div className="flex w-full hover:bg-gray-100 items-center px-3">
+                    <img src="/universal/instagram.svg" width="20" />
+                    <a
+                      href={bricklyInstagram}
+                      target="_blank"
+                      className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm"
+                      role="menuitem"
+                      id="menu-item-1"
+                    >
+                      Instagram
+                    </a>
+                  </div>
+                  <div className="flex w-full hover:bg-gray-100 items-center px-3">
+                    <img src="/universal/telegram.svg" width="20" />
+                    <a
+                      href={bricklyTelegram}
+                      target="_blank"
+                      className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm"
+                      role="menuitem"
+                      id="menu-item-1"
+                    >
+                      Telegram
+                    </a>
+                  </div>
+                  <div className="flex w-full hover:bg-gray-100 items-center px-3">
+                    <img src="/universal/linkedin.svg" width="20" />
+                    <a
+                      href={
+                        "https://www.linkedin.com/company/bricklyrealestate/"
+                      }
+                      target="_blank"
+                      className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm"
+                      role="menuitem"
+                      id="menu-item-1"
+                    >
+                      Likendin
+                    </a>
+                  </div>
                 </div>
               </div>
             ) : (
