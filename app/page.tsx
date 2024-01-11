@@ -154,7 +154,7 @@ export default function Home() {
               {" "}
               <div className="text-gray-100">Empieza en</div>{" "}
               <div className="font-bold flex items-end sm:content-end  text-sm ">
-                <CountdownTimer />
+                <CountdownTimer />{" "}
               </div>{" "}
             </div>
           </div>

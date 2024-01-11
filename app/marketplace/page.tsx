@@ -1,7 +1,6 @@
 "use client";
 import CustomButton from "@/components/ui/Button";
 import { useState } from "react";
-import CheckoutPage from "./checkout";
 import DetailsBeforeCheckout from "./details";
 
 export default function InvestPage() {
