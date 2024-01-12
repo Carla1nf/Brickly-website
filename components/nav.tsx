@@ -120,13 +120,13 @@ function Nav() {
       </div>
       <div className="flex-row px-4 items-center md:flex hidden">
         <Link
-          className="px-6 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 rounded-lg font-semibold"
+          className="px-6 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 rounded-lg font-semibold transition-all "
           target="_blank"
           href={equipo}
         >
           Equipo
         </Link>
-        <div className="px-6 text-center text-[14.5px] h-12 items-center grid font-semibold  hover:bg-slate-400/10 rounded-lg">
+        <div className="px-6 text-center text-[14.5px] h-12 items-center grid font-semibold  transition-all  hover:bg-slate-400/10 rounded-lg">
           <div className="relative inline-block text-left">
             <div
               onClick={() => setIsOpen(!isOpen)}
@@ -214,7 +214,7 @@ function Nav() {
         </div>
 
         <Link
-          className="px-4 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 rounded-lg font-semibold"
+          className="px-4 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 rounded-lg font-semibold transition-all "
           href={contacto}
           target="_blank"
         >
