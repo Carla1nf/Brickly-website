@@ -40,9 +40,9 @@ export default function UsuarioPage() {
               <div className="h-12 w-12 rounded-lg bg-orange-100"></div>
               <div className="flex-col flex">
                 <div className="font-semibold"> Verificación de e-mail</div>
-                <div className="text-sm">
+                <div className="text-sm text-gray-500">
                   {" "}
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Requerido para abrir tu cuenta en Brickly
                 </div>
               </div>
             </div>
@@ -58,24 +58,22 @@ export default function UsuarioPage() {
               <div className="h-12 w-12 rounded-lg bg-pink-100"></div>
               <div className="flex-col flex">
                 <div className="font-semibold"> Verificación identidad</div>
-                <div className="text-sm">
+                <div className="text-sm text-gray-500">
                   {" "}
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Cumplimiento regulatorio{" "}
                 </div>
               </div>
             </div>
             <div className="w-full flex justify-end pr-5">
-              <div className="h-10 w-36 bg-yellow-100 flex items-center justify-center rounded text-yellow-700 font-semibold">
-                Pendiente
+              <div className="h-10 w-36 bg-black/80 flex items-center justify-center rounded text-white font-semibold">
+                Verificarte
               </div>
             </div>
           </div>
         </div>
         <div className="text-gray-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.{" "}
+          Los datos requeridos se utilizarán únicamente para garantizar la
+          seguridad y el cumplimiento de las leyes y regulaciones.{" "}
         </div>
       </div>
     </div>

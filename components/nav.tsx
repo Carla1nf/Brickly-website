@@ -120,21 +120,21 @@ function Nav() {
       </div>
       <div className="flex-row px-4 items-center md:flex hidden">
         <Link
-          className="px-6 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 rounded-lg font-semibold transition-all "
+          className="px-3 text-center text-[14.5px] h-12 items-center grid hover:text-brickly500 rounded-lg font-semibold transition-all "
           target="_blank"
           href={equipo}
         >
           Equipo
         </Link>
-        <div className="px-6 text-center text-[14.5px] h-12 items-center grid font-semibold  transition-all  hover:bg-slate-400/10 rounded-lg">
-          <div className="relative inline-block text-left">
+        <div className="px-3 text-center text-[14.5px] h-12 items-center grid font-semibold  transition-all  rounded-lg">
+          <div className="relative inline-block text-left group">
             <div
               onClick={() => setIsOpen(!isOpen)}
-              className="flex cursor-pointer gap-1"
+              className="flex cursor-pointer gap-1 hover:text-brickly500"
             >
               Comunidad
               <svg
-                className="-mr-1 h-5 w-5 text-gray-400"
+                className="-mr-1 h-5 w-5 text-gray-400 group-hover:fill-brickly500"
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
@@ -160,7 +160,7 @@ function Nav() {
                     <a
                       href={bricklyTwitter}
                       target="_blank"
-                      className="text-gray-700 block px-4 py-2 text-sm"
+                      className="text-gray-700 block hover:text-brickly500  px-4 py-2 text-sm"
                       role="menuitem"
                       id="menu-item-0"
                     >
@@ -172,7 +172,7 @@ function Nav() {
                     <a
                       href={bricklyInstagram}
                       target="_blank"
-                      className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm"
+                      className="text-gray-700 hover:text-brickly500  block px-4 py-2 text-sm"
                       role="menuitem"
                       id="menu-item-1"
                     >
@@ -184,7 +184,7 @@ function Nav() {
                     <a
                       href={bricklyTelegram}
                       target="_blank"
-                      className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm"
+                      className="text-gray-700 hover:text-brickly500  block px-4 py-2 text-sm"
                       role="menuitem"
                       id="menu-item-1"
                     >
@@ -198,7 +198,7 @@ function Nav() {
                         "https://www.linkedin.com/company/bricklyrealestate/"
                       }
                       target="_blank"
-                      className="text-gray-700 hover:bg-gray-100  block px-4 py-2 text-sm"
+                      className="text-gray-700 hover:text-brickly500 block px-4 py-2 text-sm"
                       role="menuitem"
                       id="menu-item-1"
                     >
@@ -214,7 +214,7 @@ function Nav() {
         </div>
 
         <Link
-          className="px-4 text-center text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 rounded-lg font-semibold transition-all "
+          className="px-3 text-center text-[14.5px] h-12 items-center grid hover:text-brickly500 rounded-lg font-semibold transition-all "
           href={contacto}
           target="_blank"
         >

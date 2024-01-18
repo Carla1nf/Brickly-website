@@ -48,7 +48,7 @@ export default function RootLayout({
           <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
             {children}
           </main>
-          <footer className="p-8 text-center lg:h-72 bg-brickly50/70 ">
+          <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
             <Component />
           </footer>
         </Theme>

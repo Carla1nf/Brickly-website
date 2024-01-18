@@ -2,15 +2,6 @@
 import { useState } from "react";
 
 export default function DetailsBeforeCheckout() {
-  const [index, setIndex] = useState(0);
-
-  const porcentage = `${
-    index == 0 ? "w-[0%]" : index == 1 ? "w-[50%]" : "w-[100%]"
-  }`;
-  const mlPorcentage = `${
-    index == 0 ? "ml-[0%]" : index == 1 ? "ml-[50%]" : "ml-[100%]"
-  }`;
-
   return (
     <div className="flex absolute justify-center h-[100vh] top-20 w-screen left-0  ">
       <div className="w-full p-8 px-12 gap-8 flex flex-col items-center border-r-2 border-neutral-200/70">
@@ -55,7 +46,15 @@ export default function DetailsBeforeCheckout() {
             </div>
           </div>
         </div>
+
         <div className="flex flex-col w-10/12 gap-5">
+          <div className="flex flex-col gap-2">
+            <div className="font-semibold">Nombre del titular</div>
+            <input
+              className="border shadow px-3 py-2 rounded-lg"
+              placeholder="Nombre completo"
+            />
+          </div>
           <div className="flex flex-col gap-2">
             <div className="font-semibold">Numero de Tarjeta</div>
             <input
@@ -85,9 +84,8 @@ export default function DetailsBeforeCheckout() {
           Pagar USD102
         </div>
         <div className="w-10/12 text-gray-400 text-sm">
-          Your personal data will be used to process your order, support your
-          experience throughout this website, and for other purposes described
-          in our privacy policy.
+          Sus datos personales se utilizarán para procesar su pedido y respaldar
+          su experiencia a lo largo de este sitio web.
         </div>
       </div>
       <div className="w-full flex flex-col p-8 px-12 items-center  gap-5 bg-neutral-50/80">
@@ -151,7 +149,7 @@ export default function DetailsBeforeCheckout() {
           <div className="w-full flex flex-col">
             <div>Total</div>
             <div className="text-sm text-gray-400">
-              Including $2.24 in taxes
+              Incluye $2.24 en impuestos
             </div>
           </div>
           <div className="w-full text-2xl flex justify-end font-semibold">

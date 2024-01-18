@@ -2,9 +2,12 @@
 import CustomButton from "@/components/ui/Button";
 import { useState } from "react";
 import DetailsBeforeCheckout from "./details";
+import AmountCheckout from "./amount";
+import ConfirmedCheckout from "./confirmado";
 
 export default function InvestPage() {
   const [isChecking, setIsChecking] = useState(false);
+
   const handleChecking = (status: boolean) => {
     window.scrollTo(0, 0);
     setIsChecking(status);
@@ -12,7 +15,7 @@ export default function InvestPage() {
   return (
     <>
       {isChecking ? (
-        <DetailsBeforeCheckout />
+        <ConfirmedCheckout />
       ) : (
         <div className="flex flex-col xl:-ml-10 -mt-10">
           <div className="max-w-9xl py-5 px-20 animate-enter-div">
@@ -46,7 +49,7 @@ export default function InvestPage() {
                 className="rounded-xl h-[250px]"
               />
               <img
-                src="/hotel-page/Example1.png"
+                src="/hotel-page/Example0.png"
                 width="4200"
                 className="rounded-xl h-[250px]"
               />
@@ -82,9 +85,30 @@ export default function InvestPage() {
                 </div>
               </div>
 
-              <div className="flex p-5 h-full w-full bg-brickly50/70 rounded-xl border-2 border-brickly100 ">
+              <div className="flex gap-5 p-5 h-full w-full bg-brickly50/70 rounded-xl border-2 border-brickly100 ">
                 <div className="flex w-full flex-col gap-5">
                   <div className="text-neutral-700">Dueño del hotel</div>
+                  <div className="flex gap-3">
+                    <img src="/home/Hotelier.svg" width="60" />
+                    <div className="flex flex-col justify-center ">
+                      <div className="font-bold ">CI</div>
+                      <div className="text-sm text-neutral-500 min-w-min">
+                        Castelldefels investment LLC
+                      </div>
+                    </div>
+                    <div className="justify-self-end w-5/12 flex flex-col justify-end gap-5 items-center">
+                      <div className="bg-black h-7 w-32 bg-brickly400/30 rounded flex justify-center text-brickly700 font-semibold items-center text-sm">
+                        Página web
+                      </div>
+                      <div className="bg-black h-7 w-32 bg-brickly400/30 rounded flex justify-center text-brickly700 font-semibold items-center text-sm">
+                        Proyectos
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex w-full flex-col gap-5">
+                  <div className="text-neutral-700">Gestor del hotel</div>
                   <div className="flex gap-3">
                     <img src="/home/Hotelier.svg" width="60" />
                     <div className="flex flex-col justify-center ">
@@ -93,11 +117,11 @@ export default function InvestPage() {
                         Hotelier Services LLC
                       </div>
                     </div>
-                    <div className="justify-self-end w-7/12 flex justify-end gap-5 items-center">
-                      <div className="bg-black h-10 w-32 bg-brickly400/30 rounded flex justify-center text-brickly700 font-semibold items-center text-sm">
+                    <div className="justify-self-end w-5/12 flex flex-col justify-end gap-5 items-center">
+                      <div className="bg-black h-7 w-32 bg-brickly400/30 rounded flex justify-center text-brickly700 font-semibold items-center text-sm">
                         Página web
                       </div>
-                      <div className="bg-black h-10 w-32 bg-brickly400/30 rounded flex justify-center text-brickly700 font-semibold items-center text-sm">
+                      <div className="bg-black h-7 w-32 bg-brickly400/30 rounded flex justify-center text-brickly700 font-semibold items-center text-sm">
                         Proyectos
                       </div>
                     </div>
@@ -112,7 +136,7 @@ export default function InvestPage() {
                   <div className="flex items-center gap-2 text-sm text-gray-500">
                     {" "}
                     <div className=" font-extrabold text-2xl text-brickly400">
-                      100u$d{" "}
+                      USD 100{" "}
                     </div>{" "}
                     / persona
                   </div>
@@ -135,8 +159,8 @@ export default function InvestPage() {
                   </div>
                   <div>
                     <div className="flex justify-between text-sm  font-bold">
-                      <div className="flex justify-end w-[40%]">4.000U$D</div>
-                      <div>10.000U$D</div>
+                      <div className="flex justify-end w-[40%]">USD 4.000</div>
+                      <div>USD 10.000</div>
                     </div>
                   </div>
                 </div>
@@ -159,7 +183,7 @@ export default function InvestPage() {
                 <div className="flex gap-10">
                   <div className="flex flex-col gap-5 ">
                     {[
-                      ["Precio minimo del token", "100U$D"],
+                      ["Precio minimo del token", "USD 100"],
                       ["Rentabilidad  anual", "8,32%"],
                       ["Inicio Renta", "30/09/2021"],
                       ["Rentabilidad total", "7536.24"],
@@ -176,7 +200,7 @@ export default function InvestPage() {
 
                   <div className="flex flex-col gap-5 ">
                     {[
-                      ["Precio minimo del token", "100U$D"],
+                      ["Precio minimo del token", "USD 100"],
                       ["Rentabilidad anual", "8,32%"],
                       ["Inicio Renta", "30/09/2021"],
                       ["Rentabilidad total", "7536.24"],
@@ -200,10 +224,10 @@ export default function InvestPage() {
               {" "}
               <div className=" text-sm text-gray-500">Calculadora retorno</div>
               <div className="flex flex-col gap-4 font-semibold">
-                Inversión U$D:
+                Inversión USD:
                 <input
                   className="border px-4 py-1 bg-brickly100/50 font-semibold text-lg border-brickly100 rounded"
-                  placeholder="U$D"
+                  placeholder="USD"
                   min={0}
                   defaultValue={0}
                   type="number"
@@ -212,15 +236,15 @@ export default function InvestPage() {
               <div className="flex flex-col gap-3">
                 <div className="flex justify-end items-center">
                   <div className="text-sm w-full">Ganancia total (5 años)</div>
-                  <div className="text-lg text-green-900 font-bold px-2">
-                    300U$D
+                  <div className="text-lg text-green-900 font-bold px-2 w-full justify-end flex">
+                    USD 300
                   </div>
                 </div>
 
                 <div className="flex justify-end items-center">
                   <div className="text-sm w-full">Ganancia anual</div>
-                  <div className="text-lg text-green-900 font-bold px-2">
-                    60U$D
+                  <div className="text-lg text-green-900 font-bold px-2 w-full justify-end flex">
+                    USD 60
                   </div>
                 </div>
 
@@ -228,8 +252,8 @@ export default function InvestPage() {
                   <div className="text-sm w-full">
                     Monto final (Ganancia + Inversión)
                   </div>
-                  <div className="text-base text-green-900 font-bold px-2">
-                    600U$D
+                  <div className="text-base text-green-900 font-bold px-2 w-full justify-end flex">
+                    USD 600
                   </div>
                 </div>
               </div>
