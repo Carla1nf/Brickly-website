@@ -1,16 +1,12 @@
 "use client";
-import Form from "@/components/form";
 import CustomButton from "@/components/ui/Button";
 import CountdownTimer from "@/components/ui/CountDown";
 import { translateText } from "@/lib/translate";
 import { Button } from "@radix-ui/themes";
-import axios from "axios";
 import Link from "next/link";
 import React, { useState } from "react";
 
 export default function Home() {
-  const [formActive, setFormActive] = useState<boolean>(false);
-
   return (
     <div>
       <div className="bg-gradient-radial font-sans w-screen bg-[radial-gradient(50.40%_43.55%_at_50.66%_46.29%,rgba(255,98,28,0.2)_10%,rgba(255,255,255,1)_100%)] md:h-[70vh] h-auto">
