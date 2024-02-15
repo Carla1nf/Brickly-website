@@ -18,6 +18,8 @@ const Event = ({
       ? "Apertura de reservas"
       : tipo == "Reclamo"
       ? "Rentas reclamadas"
+      : tipo == "Proceso"
+      ? "Procesando pago"
       : "Hotel en preparación";
 
   const getSymbol = () => {
@@ -44,11 +46,20 @@ const Event = ({
   return (
     <>
       {/* desktop - left align design */}
-      <div className="flex gap-3 w-full ">
+      <div className="flex gap-3 w-full py-2">
         {getSymbol()}
         <div className="flex flex-col">
           <div className="font-semibold text-sm flex items-center gap-4">
-            {title} <p className="text-gray-400 text-[13px] ">({extra})</p>
+            {title}{" "}
+            <p className="text-gray-400 text-[13px] ">
+              <a
+                href={extra}
+                target="_blank"
+                className="text-black font-light underline"
+              >
+                Check payment
+              </a>
+            </p>
           </div>
           <div className="text-[12px] text-gray-400 font-semibold">
             {tiempo}

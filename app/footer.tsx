@@ -1,8 +1,11 @@
+"use client";
+
 /**
  * v0 by Vercel.
  * @see https://v0.dev/t/jBAbj6EYiMe
  */
 import Link from "next/link";
+import { translateText } from "@/lib/translate";
 
 const bricklyTwitter = "https://twitter.com/BricklyApp";
 const bricklyInstagram = "https://www.instagram.com/brickly.app/";
@@ -34,7 +37,9 @@ export default function Component() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Contáctanos</h3>
+          <h3 className="text-lg font-semibold">
+            {translateText({ text: "Contáctanos" })}
+          </h3>
           <div className="flex items-center space-x-2 justify-center ">
             <MailIcon className="h-6 w-6" />
             <span>hola@brick-ly.com</span>
@@ -45,20 +50,23 @@ export default function Component() {
           </div>
         </div>
         <div className="space-y-4 flex flex-col">
-          <h3 className="text-lg font-semibold">Mas información</h3>
+          <h3 className="text-lg font-semibold">
+            {" "}
+            {translateText({ text: "Mas información" })}
+          </h3>
           <Link
             className="text-base hover:underline"
             href={equipo}
             target="_blank"
           >
-            Nosotros
+            {translateText({ text: "Nosotros" })}
           </Link>
           <Link
             className="text-base hover:underline"
             href={servicios}
             target="_blank"
           >
-            Servicios
+            {translateText({ text: "Servicios" })}
           </Link>
         </div>
         <div className="space-y-4 flex flex-col">
@@ -68,14 +76,14 @@ export default function Component() {
             href="https://brickly.gitbook.io/brickly-info/politicas/politicas-de-privacidad"
             target="_blank"
           >
-            Política de privacidad
+            {translateText({ text: "Política de privacidad" })}
           </Link>
           <Link
             className="text-base hover:underline"
             href="https://brickly.gitbook.io/brickly-info/politicas/terminos-y-condiciones"
             target="_blank"
           >
-            Términos & condiciones
+            {translateText({ text: "Términos & condiciones" })}
           </Link>
         </div>
       </div>
