@@ -237,7 +237,7 @@ export default function InvestPage() {
                   <div className=" bg-brickly400 rounded-lg font-semibold hover:scale-[1.01] cursor-pointer transition-all py-3 text-center text-white shadow-xl ">
                     <a
                       className="w-full h-full"
-                      target="_blank"
+                      target=" _blank"
                       href={`https://buy.stripe.com/5kA6sr2zJg7NfeM4gh?prefilled_email=${info.email}`}
                     >
                       Invertir ahora
