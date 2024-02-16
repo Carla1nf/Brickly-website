@@ -9,6 +9,7 @@ import {
   useConnectContext,
   useConnection,
   useIsConnecting,
+  useIsLoadingContext,
 } from "@/context/connection";
 import { useUserDataPerHouseId } from "@/hooks/useUserData";
 import { ShowWhenTrue } from "@/components/conditionals";
@@ -24,6 +25,7 @@ export default function PanelPage() {
   const [rentaReclamanda, setRentaReclamada] = useState<any>(0);
   const [inversionTotal, setInversionTotal] = useState<any>(0);
   const [allPaymentsUser, setAllPaymentsUser] = useState<any>([]);
+  const loading = useIsLoadingContext();
 
   const getData = async () => {
     if (userAddress == "") {
@@ -57,7 +59,7 @@ export default function PanelPage() {
 
   return (
     <>
-      <ShowWhenTrue when={userAddress != ""}>
+      <ShowWhenTrue when={userAddress != "" && !loading}>
         <div className="flex flex-col items-center md:pr-5 gap-8">
           <div className="flex md:flex-row flex-col w-10/12 md:w-full md:gap-6 gap-2">
             <Stat

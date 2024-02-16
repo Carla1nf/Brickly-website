@@ -4,6 +4,7 @@ import ConnectYourWallet from "@/components/connectWallet";
 import {
   useAddressContext,
   useConnection,
+  useIsLoadingContext,
   useLogOutContext,
 } from "@/context/connection";
 import { useKYCData } from "@/hooks/useKYCData";
@@ -15,6 +16,7 @@ export default function UsuarioPage() {
   const info = useConnection() as any;
   const logOut = useLogOutContext();
   const userAddress = useAddressContext();
+  const loading = useIsLoadingContext();
 
   const GetKYC = async () => {
     const isKYC = await useKYCData(userAddress);
@@ -31,7 +33,7 @@ export default function UsuarioPage() {
   };
   return (
     <>
-      <ShowWhenTrue when={userAddress != ""}>
+      <ShowWhenTrue when={userAddress != "" && !loading}>
         <div className="flex lg:flex-row flex-col gap-5 px-8 lg:px-0">
           <div className="bg-neutral-50 shadow lg:w-1/4 h-[500px] items-center justify-center rounded-lg flex flex-col">
             <div className=" h-96 flex  flex-col items-center gap-3 justify-center animate-enter-token">

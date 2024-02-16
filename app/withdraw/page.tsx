@@ -1,14 +1,15 @@
 "use client";
 import { ShowWhenTrue } from "@/components/conditionals";
 import ConnectYourWallet from "@/components/connectWallet";
-import { useAddressContext } from "@/context/connection";
+import { useAddressContext, useIsLoadingContext } from "@/context/connection";
 
 export default function WithdrawPage() {
   const userAddress = useAddressContext();
+  const loading = useIsLoadingContext();
 
   return (
     <>
-      <ShowWhenTrue when={userAddress != ""}>
+      <ShowWhenTrue when={userAddress != "" && !loading}>
         <div className="flex flex-col">
           <div className="flex items-center border-b-2 border-b-brickly400/10 py-2">
             <div className="font-semibold text-3xl w-full">

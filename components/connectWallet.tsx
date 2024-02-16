@@ -8,14 +8,20 @@ import {
 } from "@/context/connection";
 import { ShowWhenTrue } from "./conditionals";
 import { SpinnerIcon } from "./icons";
+import { useState } from "react";
 
 export default function ConnectYourWallet() {
+  const [ready, setReady] = useState<boolean>(false);
   const userAddress = useAddressContext();
   const connect = useConnectContext();
   const connecting = useIsConnecting();
   const loading = useIsLoadingContext();
+
+  setTimeout(() => {
+    setReady(true);
+  }, 1200);
   return (
-    <>
+    <ShowWhenTrue when={ready}>
       <ShowWhenTrue when={userAddress == "" && !loading}>
         <div className="w-full text-center flex flex-col justify-center items-center">
           <div className="font-semibold text-2xl">Conectate a tu cuenta</div>
@@ -40,6 +46,6 @@ export default function ConnectYourWallet() {
           <SpinnerIcon className="w-8 animate-spin" />
         </div>
       </ShowWhenTrue>
-    </>
+    </ShowWhenTrue>
   );
 }
