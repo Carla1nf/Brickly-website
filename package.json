@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.1",
     "react-native-metamap-sdk": "^5.1.9",
+    "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
     "stripe": "^14.15.0",
     "tailwind-merge": "^2.2.0",
