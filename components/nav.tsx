@@ -184,7 +184,7 @@ function Nav() {
       <div className="flex-row px-4 items-center md:flex hidden">
         <Link
           className="px-3 text-center text-[14.5px] h-12 items-center grid hover:text-brickly500 rounded-lg font-semibold transition-all "
-          href="/marketplace"
+          href="marketplace"
         >
           {translateText({ text: "Invertir" })}
         </Link>
@@ -280,7 +280,7 @@ function Nav() {
         <ShowWhenTrue when={info != ""}>
           <Link
             className="px-3 text-center text-[14.5px] h-12 items-center grid hover:text-brickly500 rounded-lg font-semibold transition-all "
-            href="/dashboard"
+            href="dashboard"
           >
             Panel
           </Link>
@@ -289,7 +289,7 @@ function Nav() {
         <ShowWhenTrue when={info != ""}>
           <Link
             className="px-3 text-center text-[14.5px] h-12 items-center grid hover:text-brickly500 rounded-lg font-semibold transition-all "
-            href="/withdraw"
+            href="withdraw"
           >
             Retirar
           </Link>
@@ -332,7 +332,7 @@ function Nav() {
         </div>
 
         <ShowWhenTrue when={info != ""}>
-          <Link href="/user">
+          <Link href="user">
             <div className="flex items-center gap-2 px-5 hover:bg-gray-100 py-2 rounded">
               <img
                 className="w-8 h-8 rounded-full "
