@@ -28,11 +28,13 @@ export default function Home() {
               </p>
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
                 <Link href="/[path]" as={`/${"marketplace"}`} passHref>
-                  <CustomButton
-                    content={`${translateText({
-                      text: "Inverti ahora",
-                    })}`}
-                  />
+                  <a>
+                    <CustomButton
+                      content={`${translateText({
+                        text: "Inverti ahora",
+                      })}`}
+                    />
+                  </a>
                 </Link>
 
                 <Button
