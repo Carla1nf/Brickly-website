@@ -338,7 +338,7 @@ function Nav() {
                 className="w-8 h-8 rounded-full "
                 src={`${info?.profileImage}`}
               />
-              <div className="px-3 w-auto">{info?.name} </div>
+              <div className="w-32">{info?.name} </div>
             </div>
           </Link>
         </ShowWhenTrue>

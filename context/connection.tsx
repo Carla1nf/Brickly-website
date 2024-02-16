@@ -5,6 +5,8 @@ import Web3, { Address } from "web3";
 
 const Web3AuthContext = createContext<null | string>(null);
 const IsConnectingContext = createContext<boolean>(false);
+const IsLoadingContext = createContext<boolean>(false);
+
 const LogOutContext = createContext<null | (() => void)>(null);
 const ConnectContext = createContext<null | (() => void)>(null);
 const AddressContext = createContext<Address>("");
@@ -15,6 +17,10 @@ export function useConnection() {
 
 export function useIsConnecting() {
   return useContext(IsConnectingContext);
+}
+
+export function useIsLoadingContext() {
+  return useContext(IsLoadingContext);
 }
 
 export function useConnectContext() {
@@ -34,8 +40,9 @@ export function Connection({ children }: { children: React.ReactNode }) {
   const [info, setInfo] = useState<any>("");
   const [address, setAddress] = useState<Address>("");
   const [rejected, setRejected] = useState<boolean>(false);
-
   const [isConnecting, setConnecting] = useState<boolean>(false);
+  const [isLoading, setLoading] = useState<boolean>(false);
+
   // time now
   const router = usePathname();
 
@@ -58,31 +65,32 @@ export function Connection({ children }: { children: React.ReactNode }) {
       },
     });
 
-    try {
-      await web3auth.initModal();
-      _setWeb3Auth(web3auth);
-    } catch (e) {
-      console.log(e);
+    if (!_web3Auth) {
+      try {
+        await web3auth.initModal();
+        _setWeb3Auth(web3auth);
+      } catch (e) {
+        console.log(e);
+      }
     }
-
-    setConnecting(true);
-    const web3authProvider = await web3auth.connect();
+    const webAuth = _web3Auth ? _web3Auth : web3auth;
+    setRejected(true);
+    const web3authProvider = await webAuth.connect();
 
     try {
-      const web3 = new Web3(web3authProvider ?? _web3Auth);
+      const web3 = new Web3(web3authProvider ?? webAuth);
       const userAccounts = await web3.eth.getAccounts();
-      const getInfo = await web3auth.getUserInfo();
+      const getInfo = await webAuth.getUserInfo();
       console.log("Info", getInfo);
       setAddress(userAccounts[0]);
       setInfo(getInfo);
+      setRejected(false);
       console.log(getInfo);
       console.log("executing...");
     } catch (e) {
       setRejected(true);
       console.log(e);
-      setConnecting(false);
     }
-    setConnecting(false);
   };
 
   const logout = async () => {
@@ -94,9 +102,14 @@ export function Connection({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
+    setLoading(true);
+
     if (!rejected) {
       manageConection();
     }
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, [router]);
 
   return (
@@ -106,7 +119,9 @@ export function Connection({ children }: { children: React.ReactNode }) {
           <IsConnectingContext.Provider value={isConnecting}>
             <AddressContext.Provider value={address}>
               <LogOutContext.Provider value={logout}>
-                {children}
+                <IsLoadingContext.Provider value={isLoading}>
+                  {children}
+                </IsLoadingContext.Provider>
               </LogOutContext.Provider>
             </AddressContext.Provider>
           </IsConnectingContext.Provider>
