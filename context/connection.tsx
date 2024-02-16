@@ -62,8 +62,9 @@ export function Connection({ children }: { children: React.ReactNode }) {
     }
 
     setConnecting(true);
+    const web3authProvider = await web3auth.connect();
+
     try {
-      const web3authProvider = await web3auth.connect();
       const web3 = new Web3(web3authProvider ?? _web3Auth);
       const userAccounts = await web3.eth.getAccounts();
       const getInfo = await web3auth.getUserInfo();
