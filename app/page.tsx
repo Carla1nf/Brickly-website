@@ -3,8 +3,9 @@ import CustomButton from "@/components/ui/Button";
 import CountdownTimer from "@/components/ui/CountDown";
 import { translateText } from "@/lib/translate";
 import { Button } from "@radix-ui/themes";
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 export default function Home() {
   return (
@@ -27,15 +28,13 @@ export default function Home() {
                 })}
               </p>
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
-                <NavLink to="/marketplace">
-                  <a>
-                    <CustomButton
-                      content={`${translateText({
-                        text: "Inverti ahora",
-                      })}`}
-                    />
-                  </a>
-                </NavLink>
+                <a onClick={() => ""}>
+                  <CustomButton
+                    content={`${translateText({
+                      text: "Inverti ahora",
+                    })}`}
+                  />
+                </a>
 
                 <Button
                   size="3"
@@ -43,14 +42,11 @@ export default function Home() {
                   variant="soft"
                   className="bg-black/0 font-semibold rounded-lg transition-all text-black h-10 cursor-pointer"
                 >
-                  <NavLink
-                    to="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web"
-                    target="_blank"
-                  >
+                  <Link href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/como-usar-la-web">
                     {translateText({
                       text: "Descubre cómo arrancar",
                     })}
-                  </NavLink>
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -257,8 +253,8 @@ export default function Home() {
                 </Button>
               </a>
 
-              <NavLink
-                to="https://brickly.gitbook.io/brick-ly/guia-de-usuario/evaluacion-de-inmuebles"
+              <Link
+                href="https://brickly.gitbook.io/brick-ly/guia-de-usuario/evaluacion-de-inmuebles"
                 target="_blank"
               >
                 <Button
@@ -271,7 +267,7 @@ export default function Home() {
                     text: "Mas información",
                   })}{" "}
                 </Button>
-              </NavLink>
+              </Link>
             </div>
           </>
         </div>

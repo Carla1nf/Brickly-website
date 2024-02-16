@@ -1,5 +1,6 @@
 import { Web3Auth } from "@web3auth/modal";
-import { createContext, useContext, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { createContext, useContext, useEffect, useState } from "react";
 import Web3, { Address } from "web3";
 
 const Web3AuthContext = createContext<null | string>(null);
@@ -32,8 +33,11 @@ export function Connection({ children }: { children: React.ReactNode }) {
   const [_web3Auth, _setWeb3Auth] = useState<any>();
   const [info, setInfo] = useState<any>("");
   const [address, setAddress] = useState<Address>("");
+  const [rejected, setRejected] = useState<boolean>(false);
+
   const [isConnecting, setConnecting] = useState<boolean>(false);
   // time now
+  const router = usePathname();
 
   const manageConection = async () => {
     const web3auth = new Web3Auth({
@@ -74,6 +78,7 @@ export function Connection({ children }: { children: React.ReactNode }) {
       console.log(getInfo);
       console.log("executing...");
     } catch (e) {
+      setRejected(true);
       console.log(e);
       setConnecting(false);
     }
@@ -81,13 +86,18 @@ export function Connection({ children }: { children: React.ReactNode }) {
   };
 
   const logout = async () => {
-    console.log(1);
     try {
       _web3Auth.logout();
     } catch (e) {
       console.log(e);
     }
   };
+
+  useEffect(() => {
+    if (!rejected) {
+      manageConection();
+    }
+  }, [router]);
 
   return (
     <>
