@@ -53,8 +53,10 @@ export default function InvestPage() {
     : 0;
   const porcentageBuilt =
     hotelBlockcahainData && investedAmount > 0
-      ? (wantedAmount * 100) / investedAmount
+      ? (investedAmount * 100) / wantedAmount
       : 0;
+
+  console.log(porcentageBuilt, "%%");
 
   useEffect(() => {
     hotelData();
@@ -340,6 +342,12 @@ export default function InvestPage() {
           </div>
           <Calculator interest={Number(hotelOffer?.Interes)} />
         </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12771.544446561416!2d1.9676482302721963!3d41.269051592561986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sch!4v1708161891562!5m2!1ses-419!2sch"
+          className="w-full"
+          height="450"
+          loading="lazy"
+        ></iframe>
       </div>
     </>
   );
