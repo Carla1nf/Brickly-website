@@ -282,7 +282,10 @@ export default function InvestPage() {
               <div className="text-gray-500 text-sm ">
                 Es gratis y sin obligación ━ puedes cancelarla cuando quieras
               </div>
-              <a href="https://calendly.com/brick-ly/30min" target="_blank">
+              <a
+                href="https://calendly.com/juanignacio-brick-ly/30min"
+                target="_blank"
+              >
                 <div className=" bg-black/60 rounded-lg font-semibold hover:scale-[1.01] cursor-pointer transition-all py-3 text-center text-white mt-2">
                   Solicitar reunión
                 </div>
