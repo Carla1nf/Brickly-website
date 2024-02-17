@@ -4,6 +4,8 @@ import { ShowWhenTrue } from "./conditionals";
 import { useDataHotelId } from "@/hooks/useHotelData";
 import { useUserDataPerHouseId } from "@/hooks/useUserData";
 import { useAddressContext } from "@/context/connection";
+import { fromDecimals } from "@/lib/erc20";
+import { INTERNAL_TOKENS } from "@/lib/token";
 
 const InvestmentRow = ({ houseID }: { houseID: number }) => {
   const [open, setOpen] = useState(false);
@@ -15,8 +17,16 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
 
   const Init = async () => {
     const info = (await useUserDataPerHouseId(1, 1, userAddress)) as any;
-    setInversionTotal(info ? Number(info[0]?.result) : null);
-    setRentaSinReclamar(info ? Number(info[1]?.result) : null);
+    setInversionTotal(
+      info
+        ? fromDecimals(info[0]?.result, INTERNAL_TOKENS.polygon[1].decimals)
+        : null
+    );
+    setRentaSinReclamar(
+      info
+        ? fromDecimals(info[1]?.result, INTERNAL_TOKENS.polygon[1].decimals)
+        : null
+    );
   };
 
   const InitInformacionHotel = async () => {
