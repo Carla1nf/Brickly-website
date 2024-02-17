@@ -235,7 +235,7 @@ export default function Home() {
                   170,000 U$D
                 </div>
                 <div className="mt-3 sm:w-[340px] bg-gray-200 rounded-full dark:bg-gray-700">
-                  <div className=" bg-gradient-to-r from-orange-400 to-pink-500 text-xs font-medium text-blue-100 text-center leading-none rounded-full w-[100%] h-2"></div>
+                  <div className=" bg-gradient-to-r from-orange-400 to-pink-500 text-xs font-medium text-blue-100 text-center leading-none rounded-full w-[0%] h-2"></div>
                 </div>
               </div>
             </div>
