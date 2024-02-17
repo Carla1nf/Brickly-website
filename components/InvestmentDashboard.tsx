@@ -8,14 +8,14 @@ import { fromDecimals } from "@/lib/erc20";
 import { INTERNAL_TOKENS } from "@/lib/token";
 
 const InvestmentRow = ({ houseID }: { houseID: number }) => {
-  const [open, setOpen] = useState(false);
   const [rentaSinReclamar, setRentaSinReclamar] = useState<any>(null);
   const [inversionTotal, setInversionTotal] = useState<any>(null);
   const [informacionHotel, setInformacionHotel] = useState<any>(null);
-
   const userAddress = useAddressContext();
+  let isOpen = true;
 
   const Init = async () => {
+    // VER NFT ID
     const info = (await useUserDataPerHouseId(1, 1, userAddress)) as any;
     setInversionTotal(
       info
@@ -33,15 +33,16 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
     const informaciónInversion = (await useDataHotelId(1)) as any;
     setInformacionHotel(informaciónInversion);
   };
-  Init();
+
   InitInformacionHotel();
+  Init();
 
   // House ID & ADDRESS -->
 
   return (
-    <ShowWhenTrue when={inversionTotal != null && inversionTotal > 0}>
+    <ShowWhenTrue when={inversionTotal != null && inversionTotal == 0}>
       <div className="flex flex-col relative hover:bg-neutral-100  px-2 ">
-        <div className="flex items-center h-12 " onClick={() => setOpen(!open)}>
+        <div className="flex items-center h-12 ">
           <div className="w-1/3 flex items-center gap-2">
             <img src="/home/Hotelier.svg" height="30" width="30" />
             <div className=" hidden sm:flex"> Castelldefels hotel</div>
@@ -50,20 +51,16 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
             USD {Number(inversionTotal).toFixed(2)}
           </div>
           <div className="sm:w-1/3 w-full  flex flex-col justify-center ">
-            <div className="text-brickly500 font-bold">0%</div>
-            <div className="bg-neutral-200 h-1 w-1/2 rounded-xl relative">
-              <div className=" bg-gradient-to-r from-brickly400 to-pink-500 w-1/2 absolute h-1 rounded-l"></div>
+            <div className="px-2 py-1 text-sm bg-yellow-100 text-yellow-600 rounded font-semibold max-w-min">
+              Recaudando
             </div>
           </div>
-          <div
-            onClick={() => setOpen(!open)}
-            className="absolute right-5 flex items-center justify-center"
-          >
+          <div className="absolute right-5 flex items-center justify-center">
             <img src="/universal/Down.svg" width="20" />
           </div>
         </div>
-        <ShowWhenTrue when={open}>
-          <div className="bg-neutral-100 lg:h-36 rounded-b-xl  animate-row-data origin-top">
+        <ShowWhenTrue when={isOpen}>
+          <div className="lg:h-36 rounded-b-xl  animate-row-data origin-top">
             <div className="flex lg:flex-row flex-col p-5 gap-8 justify-item animate-opacity-1">
               <div className="flex flex-col w-full gap-2">
                 <div className=" font-bold">
@@ -73,7 +70,7 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
                   <div className="flex-col flex gap-3  text-sm">
                     {[1, 2].map((item, index) => {
                       return (
-                        <div className="flex gap-2 items-center">
+                        <div className="flex gap-2 items-center" key={index}>
                           <div className="text-gray-500 text-sm">Estado:</div>
                           {index == 0 ? (
                             <div className="text-green-600 font-bold">
@@ -92,7 +89,7 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
                   <div className="flex-col flex gap-3  text-sm">
                     {[1, 2].map((item, index) => {
                       return (
-                        <div className="flex gap-2 items-center">
+                        <div className="flex gap-2 items-center" key={index}>
                           <div className="text-gray-500 text-sm">
                             Finalización
                           </div>
@@ -118,7 +115,13 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
                     USD {Number(rentaSinReclamar).toFixed(2)}
                   </div>
                 </div>
-                <div className="bg-brickly500 w-56 h-8 text-sm rounded text-white font-bold justify-center items-center flex cursor-pointer hover:scale-[1.03] transition-all">
+                <div
+                  className={`bg-brickly500 w-56 h-8 text-sm rounded text-white font-bold justify-center items-center flex cursor-pointer hover:scale-[1.03] transition-all ${
+                    rentaSinReclamar == 0
+                      ? " cursor-not-allowed opacity-65"
+                      : ""
+                  }`}
+                >
                   Reclamar rentas
                 </div>
                 <div className="flex gap-2 text-sm">

@@ -52,17 +52,16 @@ export default function PanelPage() {
     const info = (await useUserDataPerHouseId(1, 1, userAddress)) as any;
     if (info) {
       setInversionTotal(
-        fromDecimals(info[0]?.result, INTERNAL_TOKENS.polygon[1].decimals)
+        fromDecimals(info[0]?.result ?? 0, INTERNAL_TOKENS.polygon[1].decimals)
       );
       setRentaSinReclamar(
-        fromDecimals(info[1]?.result, INTERNAL_TOKENS.polygon[1].decimals)
+        fromDecimals(info[1]?.result ?? 0, INTERNAL_TOKENS.polygon[1].decimals)
       );
       setRentaReclamada(
-        fromDecimals(info[2]?.result, INTERNAL_TOKENS.polygon[1].decimals)
+        fromDecimals(info[2]?.result ?? 0, INTERNAL_TOKENS.polygon[1].decimals)
       );
     }
   };
-  console.log(1);
   GetInfo();
 
   return (
