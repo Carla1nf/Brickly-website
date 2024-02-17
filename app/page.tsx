@@ -28,7 +28,7 @@ export default function Home() {
                 })}
               </p>
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
-                <a onClick={() => ""}>
+                <a href="marketplace">
                   <CustomButton
                     content={`${translateText({
                       text: "Inverti ahora",

@@ -17,6 +17,8 @@ import { Address } from "web3";
 import { SpinnerIcon } from "@/components/icons";
 import ConnectYourWallet from "@/components/connectWallet";
 import axios from "axios";
+import { fromDecimals } from "@/lib/erc20";
+import { INTERNAL_TOKENS } from "@/lib/token";
 
 export default function PanelPage() {
   const userAddress = useAddressContext();
@@ -49,9 +51,15 @@ export default function PanelPage() {
   const GetInfo = async () => {
     const info = (await useUserDataPerHouseId(1, 1, userAddress)) as any;
     if (info) {
-      setInversionTotal(Number(info[0]?.result));
-      setRentaSinReclamar(Number(info[1]?.result));
-      setRentaReclamada(Number(info[2]?.result));
+      setInversionTotal(
+        fromDecimals(info[0]?.result, INTERNAL_TOKENS.polygon[1].decimals)
+      );
+      setRentaSinReclamar(
+        fromDecimals(info[1]?.result, INTERNAL_TOKENS.polygon[1].decimals)
+      );
+      setRentaReclamada(
+        fromDecimals(info[2]?.result, INTERNAL_TOKENS.polygon[1].decimals)
+      );
     }
   };
   console.log(1);

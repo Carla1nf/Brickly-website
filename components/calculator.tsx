@@ -41,9 +41,7 @@ export default function Calculator({ interest }: { interest: number }) {
         </div>
 
         <div className="flex justify-end items-center">
-          <div className="text-sm w-full">
-            Monto final (Ganancia + Inversión)
-          </div>
+          <div className="text-sm w-full">Monto final</div>
           <div className="text-base text-green-900  font-semibold px-2 w-full justify-end flex">
             USD {(anualInterest * 5 + investment).toFixed(2)}
           </div>
