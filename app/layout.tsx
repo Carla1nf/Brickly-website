@@ -8,8 +8,7 @@ import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import Component from "./footer";
 import Providers from "@/components/providers";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import { NextUIProvider } from "@nextui-org/react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./page";
 import InvestPage from "./marketplace/page";
 
@@ -44,23 +43,25 @@ export default function RootLayout({
         ></script>
         <link rel="icon" type="image/svg+xml" href="/navbar/BricklyIcon.svg" />
       </head>
-      <body className=" font-sans antialiased overflow-x-hidden h-[calc(100dvh)]">
-        <Theme>
-          <Providers>
-            <Nav />
+      <BrowserRouter>
+        <body className=" font-sans antialiased overflow-x-hidden h-[calc(100dvh)]">
+          <Theme>
+            <Providers>
+              <Nav />
 
-            <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/marketplace" element={<InvestPage />} />
-              </Routes>
-            </main>
-            <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
-              <Component />
-            </footer>
-          </Providers>
-        </Theme>
-      </body>
+              <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/marketplace" element={<InvestPage />} />
+                </Routes>
+              </main>
+              <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
+                <Component />
+              </footer>
+            </Providers>
+          </Theme>
+        </body>
+      </BrowserRouter>
     </html>
   );
 }
