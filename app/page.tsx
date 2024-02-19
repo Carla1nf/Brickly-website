@@ -6,11 +6,12 @@ import { Button } from "@radix-ui/themes";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { revalidatePath } from "next/cache";
 
 export default function Home() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/marketplace");
+    revalidatePath("/marketplace");
   };
   return (
     <div>

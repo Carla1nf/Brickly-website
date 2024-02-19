@@ -44,9 +44,9 @@ export default function RootLayout({
         ></script>
         <link rel="icon" type="image/svg+xml" href="/navbar/BricklyIcon.svg" />
       </head>
-      <body className=" font-sans antialiased overflow-x-hidden h-[calc(100dvh)]">
-        <Theme>
-          <Providers>
+      <Providers>
+        <body className=" font-sans antialiased overflow-x-hidden h-[calc(100dvh)]">
+          <Theme>
             <Nav />
             <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
               {children}
@@ -54,9 +54,9 @@ export default function RootLayout({
             <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
               <Component />
             </footer>
-          </Providers>
-        </Theme>
-      </body>
+          </Theme>
+        </body>
+      </Providers>
     </html>
   );
 }
