@@ -1,5 +1,3 @@
-"use client";
-
 import { Inter as FontSans } from "next/font/google";
 import React from "react";
 import Nav from "@/components/nav";
@@ -50,10 +48,7 @@ export default function RootLayout({
               <Nav />
 
               <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/marketplace" element={<InvestPage />} />
-                </Routes>
+                {children}
               </main>
               <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
                 <Component />
