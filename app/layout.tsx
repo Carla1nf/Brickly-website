@@ -7,6 +7,7 @@ import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import Component from "./footer";
 import Providers from "@/components/providers";
+import "lib/shallow-route-workaround";
 
 const fontSans = FontSans({
   subsets: ["latin"],

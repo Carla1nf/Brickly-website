@@ -10,9 +10,7 @@ import { revalidatePath } from "next/cache";
 
 export default function Home() {
   const router = useRouter();
-  const handleClick = () => {
-    revalidatePath("/marketplace");
-  };
+
   return (
     <div>
       <div className="bg-gradient-radial font-sans w-screen bg-[radial-gradient(50.40%_43.55%_at_50.66%_46.29%,rgba(255,98,28,0.2)_10%,rgba(255,255,255,1)_100%)] md:h-[70vh] h-auto">
@@ -33,13 +31,13 @@ export default function Home() {
                 })}
               </p>
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
-                <a onClick={() => handleClick()}>
+                <Link href={"marketplace"} shallow={true}>
                   <CustomButton
                     content={`${translateText({
                       text: "Inverti ahora",
                     })}`}
                   />
-                </a>
+                </Link>
 
                 <Button
                   size="3"
