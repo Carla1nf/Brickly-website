@@ -81,11 +81,13 @@ export default function InvestPage() {
             </div>
             <div className="flex space-x-5 h-12">
               <CustomButton
-                content={"Compartir"}
-                link="https://brick-ly.com/marketplace"
-                copia={true}
+                content={"Mas información"}
+                link="https://brickly.gitbook.io/brick-ly/"
               />
-              <CustomButton content={"Estructura legal"} />
+              <CustomButton
+                content={"Estructura legal"}
+                link="https://brickly.gitbook.io/brick-ly/guia-de-usuario/legal-structure"
+              />
             </div>
           </div>
         </div>
@@ -342,8 +344,9 @@ export default function InvestPage() {
           </div>
           <Calculator interest={Number(hotelOffer?.Interes)} />
         </div>
+
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12771.544446561416!2d1.9676482302721963!3d41.269051592561986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sch!4v1708161891562!5m2!1ses-419!2sch"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5602.924494730809!2d1.9661319764492595!3d41.266023874970905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a482a107090b37%3A0xddd6243ef740bed!2sAv.%20dels%20Banys%2C%2027%2C%2008860%20Castelldefels%2C%20Barcelona%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sch!4v1708350155699!5m2!1ses-419!2sch"
           className="w-full border border-brickly400 rounded-xl shadow-lg"
           height="450"
           loading="lazy"

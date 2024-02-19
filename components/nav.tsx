@@ -291,7 +291,7 @@ function Nav() {
             className="px-3 text-center text-[14.5px] h-12 items-center grid hover:text-brickly500 rounded-lg font-semibold transition-all "
             href="withdraw"
           >
-            Retirar
+            {translateText({ text: "Retirar" })}
           </Link>
         </ShowWhenTrue>
 
@@ -303,10 +303,7 @@ function Nav() {
           />
           <div className="w-6">{activeLenguage}</div>
           <div className="absolute group-hover:flex hidden right-0 z-10 mt-6 w-40 p-3 flex-col gap-4 bg-neutral-50 shadow-lg rounded-lg">
-            {[
-              ["ES", "Español"],
-              ["EN", "English"],
-            ].map((item) => {
+            {[["ES", "Español"]].map((item) => {
               return (
                 <div
                   onClick={() => {

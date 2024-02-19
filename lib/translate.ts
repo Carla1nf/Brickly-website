@@ -5,7 +5,7 @@ export const translateText = ({ text }: { text: string }) => {
   const currentLenguage = UseLenguage();
 
   if (currentLenguage == "EN") {
-    return (translations[0].EN as any)[text];
+    return (translations[0].EN as any)[text] as string;
   }
 
   return text;

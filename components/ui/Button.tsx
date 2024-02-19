@@ -5,7 +5,6 @@ export default function CustomButton({
   content,
   loading,
   link,
-  copia,
 }: {
   content: string;
   loading?: boolean;
@@ -14,7 +13,7 @@ export default function CustomButton({
 }) {
   const handleClick = async () => {};
   return (
-    <a href={copia ? "" : link} target="_blank">
+    <a href={link} target="_blank">
       <button
         className=" flex gap-3 items-center justify-center bg-brickly100 hover:bg-brickly400/40 hover:scale-[1.02] transition-all text-brickly700
          select-none  rounded-md w-full md:w-auto  py-2 px-3  text-base font-medium

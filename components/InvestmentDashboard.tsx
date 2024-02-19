@@ -37,10 +37,8 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
   InitInformacionHotel();
   Init();
 
-  // House ID & ADDRESS -->
-
   return (
-    <ShowWhenTrue when={inversionTotal != null && inversionTotal == 0}>
+    <ShowWhenTrue when={inversionTotal != null && inversionTotal > 0}>
       <div className="flex flex-col relative hover:bg-neutral-100  px-2 ">
         <div className="flex items-center h-12 ">
           <div className="w-1/3 flex items-center gap-2">

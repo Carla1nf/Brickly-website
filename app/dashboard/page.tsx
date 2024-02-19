@@ -96,9 +96,7 @@ export default function PanelPage() {
               </div>
               <InvestmentRow houseID={1} />
               <ShowWhenTrue when={allPaymentsUser.length == 0}>
-                <div className="text-center text-gray-400 mt-5">
-                  Sin inversiones
-                </div>
+                <div className="text-center text-gray-400 mt-5"></div>
               </ShowWhenTrue>
 
               <ShowWhenTrue
