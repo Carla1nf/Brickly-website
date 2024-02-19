@@ -50,7 +50,7 @@ const Event = ({
         {getSymbol()}
         <div className="flex flex-col">
           <div className="font-semibold text-sm flex items-center gap-4">
-            {title}{" "}
+            {title}
             <p className="text-gray-400 text-[13px] ">
               <a
                 href={extra}
