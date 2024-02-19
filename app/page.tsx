@@ -6,9 +6,12 @@ import { Button } from "@radix-ui/themes";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 export default function Home() {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/marketplace");
+  };
   return (
     <div>
       <div className="bg-gradient-radial font-sans w-screen bg-[radial-gradient(50.40%_43.55%_at_50.66%_46.29%,rgba(255,98,28,0.2)_10%,rgba(255,255,255,1)_100%)] md:h-[70vh] h-auto">
@@ -29,13 +32,14 @@ export default function Home() {
                 })}
               </p>
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
-                <NavLink to={"/marketplace"}>
+                <a onClick={() => handleClick()}>
                   <CustomButton
                     content={`${translateText({
                       text: "Inverti ahora",
                     })}`}
                   />
-                </NavLink>
+                </a>
+
                 <Button
                   size="3"
                   color="tomato"

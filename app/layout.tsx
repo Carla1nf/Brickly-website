@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import React from "react";
 import Nav from "@/components/nav";
@@ -6,14 +7,16 @@ import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import Component from "./footer";
 import Providers from "@/components/providers";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Home from "./page";
-import InvestPage from "./marketplace/page";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+export const metadata: Metadata = {
+  title: "Brick-ly",
+  description: "Brickly is a crowdfunding protocol built on polygon.",
+};
 
 export default function RootLayout({
   children,
@@ -41,22 +44,19 @@ export default function RootLayout({
         ></script>
         <link rel="icon" type="image/svg+xml" href="/navbar/BricklyIcon.svg" />
       </head>
-      <BrowserRouter>
-        <body className=" font-sans antialiased overflow-x-hidden h-[calc(100dvh)]">
-          <Theme>
-            <Providers>
-              <Nav />
-
-              <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
-                {children}
-              </main>
-              <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
-                <Component />
-              </footer>
-            </Providers>
-          </Theme>
-        </body>
-      </BrowserRouter>
+      <body className=" font-sans antialiased overflow-x-hidden h-[calc(100dvh)]">
+        <Theme>
+          <Providers>
+            <Nav />
+            <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
+              {children}
+            </main>
+            <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
+              <Component />
+            </footer>
+          </Providers>
+        </Theme>
+      </body>
     </html>
   );
 }
