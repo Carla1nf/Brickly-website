@@ -31,7 +31,7 @@ export default function Home() {
                 })}
               </p>
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
-                <Link href={"marketplace"} shallow={true}>
+                <Link href={"marketplace"} shallow>
                   <CustomButton
                     content={`${translateText({
                       text: "Inverti ahora",

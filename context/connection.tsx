@@ -39,7 +39,6 @@ export function Connection({ children }: { children: React.ReactNode }) {
   const [_web3Auth, _setWeb3Auth] = useState<any>();
   const [info, setInfo] = useState<any>("");
   const [address, setAddress] = useState<Address>("");
-  const [rejected, setRejected] = useState<boolean>(false);
   const [isConnecting, setConnecting] = useState<boolean>(false);
   const [isLoading, setLoading] = useState<boolean>(false);
 
@@ -74,7 +73,7 @@ export function Connection({ children }: { children: React.ReactNode }) {
       }
     }
     const webAuth = _web3Auth ? _web3Auth : web3auth;
-    setRejected(true);
+
     const web3authProvider = await webAuth.connect();
 
     try {
@@ -84,11 +83,9 @@ export function Connection({ children }: { children: React.ReactNode }) {
       console.log("Info", getInfo);
       setAddress(userAccounts[0]);
       setInfo(getInfo);
-      setRejected(false);
       console.log(getInfo);
       console.log("executing...");
     } catch (e) {
-      setRejected(true);
       console.log(e);
     }
   };
@@ -103,14 +100,15 @@ export function Connection({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setLoading(true);
-
-    if (!rejected) {
+    console.log(router, " router");
+    if (router == "/user" || router == "/dashboard" || router == "/withdraw") {
       manageConection();
     }
+
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-  }, [router]);
+  });
 
   return (
     <>
