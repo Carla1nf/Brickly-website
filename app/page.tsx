@@ -6,6 +6,7 @@ import { Button } from "@radix-ui/themes";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -28,13 +29,13 @@ export default function Home() {
                 })}
               </p>
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
-                <Link href={"/marketplace"}>
+                <NavLink to={"/marketplace"}>
                   <CustomButton
                     content={`${translateText({
                       text: "Inverti ahora",
                     })}`}
                   />
-                </Link>
+                </NavLink>
                 <Button
                   size="3"
                   color="tomato"
