@@ -94,18 +94,18 @@ export default function InvestPage() {
 
         <div className="max-w-9xl py-5 flex gap-5  animate-enter-div">
           <img
-            src="/hotel-page/Base.png"
+            src="https://hotel-1-fotos.s3.amazonaws.com/Foto1-min.png"
             className="rounded-xl w-[600px] xl:w-[790px] shadow-xl"
           />
 
           <div className="flex flex-col gap-5">
             <img
-              src="/hotel-page/Example1.png"
+              src="https://hotel-1-fotos.s3.amazonaws.com/Foto2.png"
               width="4200"
               className="rounded-xl h-[250px] shadow-xl"
             />
             <img
-              src="/hotel-page/Example0.png"
+              src="https://hotel-1-fotos.s3.amazonaws.com/Foto3.png"
               width="4200"
               className="rounded-xl h-[250px] shadow-xl"
             />
