@@ -12,7 +12,7 @@ import {
   useIsLoadingContext,
 } from "@/context/connection";
 import { useUserDataPerHouseId } from "@/hooks/useUserData";
-import { ShowWhenTrue } from "@/components/conditionals";
+import { ShowWhenFalse, ShowWhenTrue } from "@/components/conditionals";
 import { Address } from "web3";
 import { SpinnerIcon } from "@/components/icons";
 import ConnectYourWallet from "@/components/connectWallet";
@@ -118,15 +118,20 @@ export default function PanelPage() {
 
                 <ShowWhenTrue when={allPaymentsUser.length > 0}>
                   {allPaymentsUser.map((item: any) => {
-                    console.log(item);
                     return (
-                      <Event
-                        extra={item.receipt_url}
-                        tiempo={`${(Number(item.amount) / 100).toFixed(2)} USD`}
-                        tipo={`${
-                          item.description == "Confirmado" ? "Exito" : "Proceso"
-                        }`}
-                      />
+                      <ShowWhenFalse when={item.refunded}>
+                        <Event
+                          extra={item.receipt_url}
+                          tiempo={`${(Number(item.amount) / 100).toFixed(
+                            2
+                          )} USD`}
+                          tipo={`${
+                            item.description == "Confirmado"
+                              ? "Exito"
+                              : "Proceso"
+                          }`}
+                        />
+                      </ShowWhenFalse>
                     );
                   })}
                 </ShowWhenTrue>

@@ -100,7 +100,6 @@ export function Connection({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setLoading(true);
-    console.log(router, " router");
     if (router == "/user" || router == "/dashboard" || router == "/withdraw") {
       manageConection();
     }
@@ -108,7 +107,7 @@ export function Connection({ children }: { children: React.ReactNode }) {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-  });
+  }, [router]);
 
   return (
     <>

@@ -258,7 +258,7 @@ export default function InvestPage() {
                   <div
                     style={{
                       width: `${
-                        hotelBlockcahainData ? `${porcentageBuilt}px` : ""
+                        hotelBlockcahainData ? `${porcentageBuilt}%` : ""
                       }`,
                     }}
                     className={`absolute  left-0 top-0 bottom-0  bg-gradient-to-r from-orange-400 to-pink-500 transition-all  ${
@@ -270,7 +270,14 @@ export default function InvestPage() {
                 </div>
                 <div>
                   <div className="flex justify-between text-sm font-bold">
-                    <div className="flex justify-end gap-2 ">
+                    <div
+                      style={{
+                        width: `${
+                          hotelBlockcahainData ? `${porcentageBuilt}%` : ""
+                        }`,
+                      }}
+                      className="flex justify-end gap-2 "
+                    >
                       USD{" "}
                       {hotelBlockcahainData ? investedAmount : <Skeletons />}
                     </div>
