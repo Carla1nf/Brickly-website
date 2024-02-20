@@ -57,7 +57,10 @@ export default function Home() {
             <div className="flex lg:w-full lg:px-16 min-[1320px]:px-52 min-[1100px]:px-32 space-x-4 relative scale-[0.85] lg:scale-[1]   justify-center  lg:justify-end">
               <div className="rounded-full shadow-2xl bg-gradient-to-br relative from-orange-400/40 to-pink-400/40  h-96 w-96">
                 <div className="h-96 w-96 rounded-full py-10 overflow-hidden">
-                  <img src="/home/Test.png" className="scale-[1.1]" />
+                  <img
+                    src="https://hotel-1-fotos.s3.amazonaws.com/Test-min.png"
+                    className="scale-[1.1]"
+                  />
                 </div>
 
                 <div className="w-44 rounded flex gap-3 items-center justify-center animate-bounce-1 delay-500 bg-white shadow-2xl border-black absolute top-36 -left-10 h-16">
@@ -170,7 +173,7 @@ export default function Home() {
         <div className="md:p-8 justify-self-center relative ">
           <img
             className="shadow-2xl max-h-[400px] h-[90vw] rounded w-[90vw] max-w-[440px]"
-            src="/hotel-page/Base.png"
+            src="https://hotel-1-fotos.s3.amazonaws.com/Base-min.png"
           />
           <div className="bg-neutral-500/60 absolute md:bottom-14 md:left-16 bottom-0 right-0  left-0 sm:h-20  lg:w-[32vw] md:max-w-[370px] rounded backdrop-blur-md flex flex-row  text-white ">
             <div className="flex flex-col p-3 sm:scale-100 scale-[0.90]">
@@ -339,12 +342,12 @@ export default function Home() {
             <div className="w-[450px] items-center justify-center flex relative bg-gradient-to-tr rounded-lg h-[450px] -mt-16">
               <img
                 className=" shadow-2xl lg:absolute"
-                src="/Prueba.png"
+                src="https://hotel-1-fotos.s3.amazonaws.com/Prueba-1-min.png"
                 width="350"
               />
               <img
                 className="absolute shadow-2xl z-10 -bottom-10 -right-20 lg:block hidden rounded"
-                src="/hotel-page/Example1.png"
+                src="https://hotel-1-fotos.s3.amazonaws.com/Example1-min.png"
                 width="350"
               />
             </div>
