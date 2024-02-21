@@ -20,6 +20,7 @@ export default function ConnectYourWallet() {
   setTimeout(() => {
     setReady(true);
   }, 500);
+
   return (
     <ShowWhenTrue when={ready}>
       <ShowWhenTrue when={userAddress == "" && !loading}>

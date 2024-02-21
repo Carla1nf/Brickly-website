@@ -2,9 +2,7 @@
 import CustomButton from "@/components/ui/Button";
 import { useEffect, useRef, useState } from "react";
 import { GetData, getHotelData } from "@/services/api";
-import { useDataHotelId } from "@/hooks/useHotelData";
 import { ShowWhenFalse, ShowWhenTrue } from "@/components/conditionals";
-import { useKYCData } from "@/hooks/useKYCData";
 import {
   useAddressContext,
   useConnectContext,
@@ -17,28 +15,28 @@ import { INTERNAL_TOKENS } from "@/lib/token";
 import Skeletons from "@/components/ui/Skeleton";
 import { SpinnerIcon } from "@/components/icons";
 import CountdownTimer from "@/components/ui/CountDown";
-import axios from "axios";
 import Calculator from "@/components/calculator";
+import { useHotelBlockchainData, useKYC } from "@/context/conne";
 
 export default function InvestPage() {
   const [hotelOffer, setHotelOffer] = useState<GetData>();
-  const [isKyc, setKyc] = useState<boolean>(false);
+  const [galeriaAbierta, setGaleriaAbierta] = useState<boolean>(false);
+  const [indexFoto, setIndexFoto] = useState<number>(1);
+  const imagesLinks = [
+    "https://hotel-1-fotos.s3.amazonaws.com/Foto1-min.png",
+    "https://hotel-1-fotos.s3.amazonaws.com/Paisaje2-min.png",
+    "https://hotel-1-fotos.s3.amazonaws.com/Base-min.png",
+    "https://hotel-1-fotos.s3.amazonaws.com/Example1-min.png",
+    "https://hotel-1-fotos.s3.amazonaws.com/Foto3.png",
+    "https://hotel-1-fotos.s3.amazonaws.com/Foto2.png",
+    "https://hotel-1-fotos.s3.amazonaws.com/Hotel4.png",
+  ];
   const info = useConnection() as any;
-  const [hotelBlockcahainData, setHotelBlockchainData] = useState<any>(null);
 
-  const userAddress = useAddressContext();
   const connecting = useIsConnecting();
   const connect = useConnectContext();
-
-  const GetKYC = async () => {
-    const isKYC = await useKYCData(userAddress);
-    setKyc(isKYC);
-  };
-
-  const GetBlockchainData = async () => {
-    const hotel = await useDataHotelId(1);
-    setHotelBlockchainData(hotel);
-  };
+  const isKyc = useKYC();
+  const hotelBlockcahainData = useHotelBlockchainData() as any;
 
   const hotelData = async () => {
     const data = (await getHotelData(1)) as GetData;
@@ -56,17 +54,81 @@ export default function InvestPage() {
       ? (investedAmount * 100) / wantedAmount
       : 0;
 
-  console.log(porcentageBuilt, "%%");
-
   useEffect(() => {
     hotelData();
   }, []);
 
-  GetKYC();
-  GetBlockchainData();
-
   return (
     <>
+      <ShowWhenTrue when={galeriaAbierta}>
+        <div className="absolute bg-black/40 top-0 left-0 right-0 bottom-0 z-10">
+          <div className="w-full flex items-center justify-center h-screen fixed top-0">
+            <div className="bg-white xl:w-[1100px] overflow-hidden w-[80%] h-auto  rounded animate-enter-token shadow-lg">
+              <div className="px-3">
+                <img
+                  src="/universal/back.svg"
+                  width={25}
+                  className="py-3  cursor-pointer hover:scale-[0.95]"
+                  onClick={() => setGaleriaAbierta(false)}
+                />
+              </div>
+
+              <div className="flex gap-5 w-full h-[550px] flex-col px-3">
+                <div className=" font-medium text-neutral-900 text-xl px-3">
+                  Galeria de fotos - Castelldefels Hotel
+                </div>
+                <div className="flex flex-col gap-4">
+                  <div className="flex justify-center  relative">
+                    {imagesLinks.map((item, index) => {
+                      return (
+                        <img
+                          onClick={() => setIndexFoto(index)}
+                          src={item}
+                          className={`${
+                            indexFoto == index
+                              ? "shadow-xl rounded-xl border-4 border-brickly400/40 absolute md:top-2  top-12  z-10  transition-all duration-300 w-[600px] md:h-[450px] h-[300px]"
+                              : `${
+                                  index + 1 == indexFoto
+                                    ? "shadow-xl rounded-xl border-4 border-brickly400/40 opacity-80 -rotate-3 absolute -ml-[50%] top-20 hover:scale-[1.04]  transition-all duration-300 cursor-pointer w-[500px] h-[300px]"
+                                    : `${
+                                        index - 1 == indexFoto
+                                          ? "shadow-xl rounded-xl border-4 border-brickly400/40 opacity-80 rotate-3 absolute top-20 ml-[50%] hover:scale-[1.04]  transition-all duration-300 cursor-pointer w-[500px] h-[300px]"
+                                          : " hidden"
+                                      }`
+                                }`
+                          }`}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center justify-center w-full h-20">
+                <img
+                  src="/universal/back.svg"
+                  width={25}
+                  onClick={() =>
+                    setIndexFoto(
+                      indexFoto == 0 ? imagesLinks.length - 1 : indexFoto - 1
+                    )
+                  }
+                  className="py-3 cursor-pointer hover:scale-[1.2] transition-all fill-white"
+                />
+                <img
+                  src="/universal/back.svg"
+                  width={25}
+                  onClick={() =>
+                    setIndexFoto(
+                      indexFoto == imagesLinks.length - 1 ? 0 : indexFoto + 1
+                    )
+                  }
+                  className="py-3 cursor-pointer hover:scale-[1.2]  transition-all rotate-180"
+                />{" "}
+              </div>
+            </div>
+          </div>
+        </div>
+      </ShowWhenTrue>
       <div className="flex flex-col xl:-ml-10 -mt-10 md:px-20 px-12">
         <div className="max-w-9xl py-5   animate-enter-div">
           <div className="flex flex-col lg:flex-row justify-between md:items-start text-center  space-y-4 lg:space-y-0 lg:space-x-8">
@@ -94,20 +156,23 @@ export default function InvestPage() {
 
         <div className="max-w-9xl py-5 flex gap-5  animate-enter-div">
           <img
+            onClick={() => setGaleriaAbierta(true)}
             src="https://hotel-1-fotos.s3.amazonaws.com/Foto1-min.png"
-            className="rounded-xl w-[600px] xl:w-[790px] shadow-xl"
+            className="rounded-xl w-[600px] md:h-auto h-96 xl:w-[790px] shadow-xl hover:opacity-90 cursor-pointer hover:scale-[0.98] transition-all"
           />
 
-          <div className="flex flex-col gap-5">
+          <div className="md:flex hidden flex-col gap-5 ">
             <img
+              onClick={() => setGaleriaAbierta(true)}
               src="https://hotel-1-fotos.s3.amazonaws.com/Foto2.png"
-              width="4200"
-              className="rounded-xl h-[250px] shadow-xl"
+              style={{ width: "420px" }}
+              className="rounded-xl h-[250px] shadow-xl hover:opacity-90 cursor-pointer hover:scale-[0.98] transition-all"
             />
             <img
+              onClick={() => setGaleriaAbierta(true)}
               src="https://hotel-1-fotos.s3.amazonaws.com/Foto3.png"
-              width="4200"
-              className="rounded-xl h-[250px] shadow-xl"
+              style={{ width: "420px" }}
+              className="rounded-xl h-[250px] shadow-xl hover:opacity-90 cursor-pointer hover:scale-[0.98] transition-all"
             />
           </div>
         </div>
@@ -153,15 +218,17 @@ export default function InvestPage() {
                 <div className="text-neutral-700 font-semibold">
                   Dueño del hotel
                 </div>
-                <div className="flex gap-3 ">
-                  <img src="/home/Hotelier.svg" width="60" />
-                  <div className="flex flex-col justify-center ">
-                    <div className=" font-semibold ">CI</div>
-                    <div className="text-sm text-neutral-500 min-w-min">
-                      Castelldefels investment LLC
+                <div className="flex gap-3 md:flex-row flex-col">
+                  <div className="flex gap-2">
+                    <img src="/home/Hotelier.svg" width="60" />
+                    <div className="flex flex-col justify-center ">
+                      <div className=" font-semibold ">CI</div>
+                      <div className="text-sm text-neutral-500 min-w-min">
+                        Castelldefels investment LLC
+                      </div>
                     </div>
                   </div>
-                  <div className="justify-self-end w-1/2 flex  justify-end gap-5 items-center">
+                  <div className="justify-self-end md:w-1/2 flex  md:justify-end gap-5 items-center">
                     <a href="https://hotelierservices.com/" target="_blank">
                       <div className="bg-black h-10 w-32 bg-brickly400/30 rounded flex justify-center text-brickly700 font-semibold items-center text-sm">
                         Página web

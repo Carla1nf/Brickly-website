@@ -9,5 +9,6 @@ export const useDataHotelId = async (id: number) => {
     args: [id],
     functionName: "dataPerId",
   });
+
   return data;
 };

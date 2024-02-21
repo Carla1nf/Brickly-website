@@ -1,6 +1,7 @@
 "use client";
 
 import { Lenguage } from "@/context/CheckoutIndex";
+import { BlockchainData } from "@/context/conne";
 import { Connection } from "@/context/connection";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode, useState } from "react";
@@ -23,7 +24,9 @@ export default function Providers({ children }: { children: ReactNode }) {
     <WagmiProvider config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
         <Connection>
-          <Lenguage>{children}</Lenguage>
+          <BlockchainData>
+            <Lenguage>{children}</Lenguage>
+          </BlockchainData>
         </Connection>
       </QueryClientProvider>
     </WagmiProvider>
