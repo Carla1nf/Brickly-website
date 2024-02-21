@@ -311,10 +311,10 @@ export default function InvestPage() {
               <div className="flex flex-col md:flex-row gap-10">
                 <div className="flex flex-col gap-5 w-full ">
                   {[
-                    ["Precio minimo del token", "USD 100"],
+                    ["Inversión minimo", "USD 100"],
                     ["Rentabilidad  anual", "8,32%"],
-                    ["Inicio Renta", "30/09/2021"],
-                    ["Rentabilidad total", "7536.24"],
+                    ["Inicio Renta", "15/04/2024"],
+                    ["Fin Renta", "04/2029"],
                     ["Blockchain", "Polygon"],
                   ].map((item) => (
                     <div className="flex gap-2 items-end justify-end md:justify-start">
@@ -330,17 +330,17 @@ export default function InvestPage() {
 
                 <div className="flex flex-col gap-5 ">
                   {[
-                    ["Precio minimo del token", "USD 100"],
-                    ["Rentabilidad anual", "8,32%"],
-                    ["Inicio Renta", "30/09/2021"],
-                    ["Rentabilidad total", "7536.24"],
-                    ["Blockchain", "Polygon"],
+                    ["Dueño del hotel", "Cast. Inv. LLC"],
+                    ["(%) Total estimado", "41,6%"],
+                    ["Periodo total", "60 meses"],
+                    ["Rentabilidad total", "16640 USD"],
+                    ["Comisión Brickly", "2%"],
                   ].map((item) => (
                     <div className="flex gap-2 items-end justify-end md:justify-start">
-                      <div className="text-gray-500 w-full md:w-56">
+                      <div className="text-gray-500 w-full md:min-w-56">
                         {item[0]}
                       </div>{" "}
-                      <div className=" font-semibold   justify-end flex items-end md:w-32 w-full  ">
+                      <div className=" font-semibold   justify-end flex items-end md:min-w-32 w-full  ">
                         {item[1]}
                       </div>
                     </div>
