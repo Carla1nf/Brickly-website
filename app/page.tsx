@@ -30,7 +30,7 @@ export default function Home() {
                   text: "El club de inversores que combina la solidez de la inversión tradicional con la innovación de blockchain.",
                 })}
               </p>
-              <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 gap-5 max-w-92">
+              <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 md:items-start items-center gap-5 max-w-92">
                 <Link href={"marketplace"} shallow>
                   <CustomButton
                     content={`${translateText({

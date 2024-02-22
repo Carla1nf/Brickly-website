@@ -62,10 +62,7 @@ function Nav() {
           />
           <div className="w-6">{activeLenguage}</div>
           <div className="absolute group-hover:flex   hidden right-0 z-10 mt-6 w-40 p-3 flex-col gap-4 bg-neutral-50 shadow-lg rounded-lg">
-            {[
-              ["ES", "Español"],
-              ["EN", "English"],
-            ].map((item) => {
+            {[["ES", "Español"]].map((item) => {
               return (
                 <div
                   onClick={() => {
@@ -120,10 +117,20 @@ function Nav() {
               <a
                 onClick={() => setBarActive(false)}
                 className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay"
-                href="#registrarse"
+                href="/marketplace"
               >
-                {translateText({ text: "Pre-registrate" })}
+                {translateText({ text: "Invertir" })}
               </a>
+
+              <ShowWhenTrue when={info != ""}>
+                <a
+                  onClick={() => setBarActive(false)}
+                  className="rounded-xl  bg-gray-50 px-4 text-center animate-enter-token text-[14.5px] h-12 items-center grid hover:bg-slate-400/10 font-semibold opacity-0 fill-mode-forwards delay"
+                  href="/dashboard"
+                >
+                  {translateText({ text: "Panel" })}
+                </a>
+              </ShowWhenTrue>
 
               <Link
                 onClick={() => setBarActive(false)}
