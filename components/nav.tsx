@@ -3,9 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Button from "./ui/Button";
-import { Web3Auth } from "@web3auth/modal";
-import Web3 from "web3";
 import { ShowWhenTrue } from "./conditionals";
 import { UseLenguage, useManageLenguage } from "@/context/CheckoutIndex";
 import { translateText } from "@/lib/translate";
@@ -49,8 +46,8 @@ function Nav() {
         <Link href="/" className=" w-[40vw] justify-self-start ">
           <Image
             src="/navbar/Brickly.svg"
-            height={50}
-            width={90}
+            height={60}
+            width={100}
             alt="Brickly"
           />
         </Link>
@@ -106,7 +103,7 @@ function Nav() {
               <div className="w-full px-10 flex justify-end animate-enter-div">
                 <Image
                   src="/navbar/Brickly.svg"
-                  height={50}
+                  height={60}
                   width={90}
                   alt="Dēbita"
                 />
@@ -182,8 +179,8 @@ function Nav() {
         <Link href="/" className=" w-[40vw]">
           <Image
             src="/navbar/Brickly.svg"
-            height={50}
-            width={90}
+            height={90}
+            width={105}
             alt="Dēbita"
           />
         </Link>
@@ -352,10 +349,9 @@ function Nav() {
             onClick={() => connectToBlockchain()}
             className="md:flex hidden px-6"
           >
-            <Button
-              content={`${translateText({ text: "Conectarse" })}`}
-              loading={connecting}
-            ></Button>
+            <div className="bg-black/90 px-3 py-2 rounded text-white font-normal cursor-pointer hover:scale-[0.97]">
+              Conectarse
+            </div>
           </a>
         </ShowWhenTrue>
       </div>

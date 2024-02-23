@@ -15,9 +15,9 @@ export default function CustomButton({
   return (
     <a href={link} target="_blank">
       <button
-        className=" flex gap-3 items-center justify-center bg-brickly100 hover:bg-brickly400/40 hover:scale-[1.02] transition-all text-brickly700
+        className=" flex gap-3 items-center justify-center bg-brickly200 hover:bg-brickly400/40 hover:scale-[1.02] transition-all text-brickly700
          select-none  rounded-md w-full md:w-auto  py-2 px-3  text-base font-medium
-        hover:bg-brickly50 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-900
+        hover:bg-brickly100 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-900
        
         focus:outline-none focus-visible:ring focus-visible:ring-brickly100 focus-visible:ring-opacity-75
         // Register all radix states

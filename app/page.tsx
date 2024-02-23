@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { revalidatePath } from "next/cache";
+import Form from "@/components/form";
 
 export default function Home() {
   const router = useRouter();
@@ -18,18 +19,22 @@ export default function Home() {
           <div className="xl:ml-16 flex-col md:flex md:flex-row  items-center">
             <div className="space-y-6 grid items-center text-center sm:text-start justify-center md:justify-start md:items-start w-full">
               <div>
+                <div className="text-black font-semibold">
+                  HOTELES FÍSICOS. PROPIEDAD DIGITAL.
+                </div>
                 <h1 className="sm:text-6xl min-[350px]:text-5xl text-4xl font-semibold">
-                  {translateText({ text: "Obten ganancias de" })}
+                  {translateText({ text: "La nueva forma de" })}
                 </h1>
                 <h1 className="font-semibold text-transparent sm:text-6xl min-[350px]:text-5xl text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 opacity-90">
-                  {translateText({ text: "tu hotel favorito" })}
+                  {translateText({ text: "invertir en hoteles" })}
                 </h1>
+                <p className="sm:text-lg mt-3 md:w-[90%] text-xs font-light text-gray-600 ">
+                  {translateText({
+                    text: "Brickly es la forma más rentable y facil de invertir en propiedad de renta turistica.",
+                  })}
+                </p>
               </div>
-              <p className="sm:text-xl text-xs font-light text-gray-600 md:w-auto">
-                {translateText({
-                  text: "El club de inversores que combina la solidez de la inversión tradicional con la innovación de blockchain.",
-                })}
-              </p>
+
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 md:items-start items-center gap-5 max-w-92">
                 <Link href={"marketplace"} shallow>
                   <CustomButton
@@ -404,6 +409,19 @@ export default function Home() {
             );
           })}
         </div>
+      </div>
+      <div className="flex flex-col sm:p-5 xl:ml-16  mt-16 gap-10">
+        <div className="flex flex-col">
+          <div className="font-semibold text-3xl ml-1 text-center sm:text-start">
+            {translateText({ text: "Suscríbete" })}
+          </div>
+          <div className="font-normal text-gray-500 md:w-[85vw] md:px-0 px-2 sm:w-auto md:text-start text-center">
+            {translateText({
+              text: "¡Obtén información exclusiva sobre inversiones con Brickly y asegura tu lugar en la primera ronda!",
+            })}
+          </div>
+        </div>
+        <Form />
       </div>
     </div>
   );

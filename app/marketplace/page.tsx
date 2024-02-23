@@ -133,8 +133,8 @@ export default function InvestPage() {
         <div className="max-w-9xl py-5   animate-enter-div">
           <div className="flex flex-col lg:flex-row justify-between md:items-start text-center  space-y-4 lg:space-y-0 lg:space-x-8">
             <div>
-              <h1 className="text-4xl  font-semibold text-gray-900">
-                Castelldefels Hotel - Habitación 1
+              <h1 className="text-3xl  font-semibold text-gray-900">
+                Castelldefels, Barcelona Hotel - 1º Habitación
               </h1>
               <div className="mt-1 text-base text-gray-600 flex md:justify-start justify-center gap-2">
                 secured by Hotelier Services{" "}

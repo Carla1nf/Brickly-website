@@ -34,21 +34,16 @@ export default function Form() {
 
   return (
     <>
-      <div className="font-bold text-2xl">
-        {translateText({ text: "Pre-registrate" })}
-      </div>
-      <div className="font-normal text-gray-500 w-[85vw] sm:w-auto">
-        {translateText({
-          text: "¡Suscríbete para información exclusiva sobre inversiones con Brickly y asegura tu lugar en la primera ronda al pre-registrarte!",
-        })}
-      </div>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-y-5 md:pr-28 md:px-0 px-3"
+      >
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="E-mail"
           type="email"
-          className=" px-4 py-4 sm:w-96  w-64 rounded-xl bg-gray-100 animate-enter-token delay-100 fill-mode-forwards opacity-0"
+          className=" px-4 py-4  rounded-xl bg-gray-100 animate-enter-token delay-100 fill-mode-forwards opacity-0"
         />
         <input
           value={name}
