@@ -50,6 +50,11 @@ export default function RootLayout({
             <Nav />
             <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
               {children}
+              <div className="fixed bottom-5 right-10  h-20 w-20">
+                <a href="https://wa.me/41782053094" target="_blank">
+                  <img src="universal/whatsappLogo.svg" width={50} />
+                </a>
+              </div>
             </main>
             <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
               <Component />

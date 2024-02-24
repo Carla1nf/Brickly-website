@@ -17,16 +17,13 @@ export default function Home() {
       <div className="bg-gradient-radial font-sans w-screen bg-[radial-gradient(50.40%_43.55%_at_50.66%_46.29%,rgba(255,98,28,0.2)_10%,rgba(255,255,255,1)_100%)] md:h-[70vh] h-auto">
         <div className="md:h-[70vh] animate-enter-div ">
           <div className="xl:ml-16 flex-col md:flex md:flex-row  items-center">
-            <div className="space-y-6 grid items-center text-center sm:text-start justify-center md:justify-start md:items-start w-full">
+            <div className="space-y-5 grid items-center text-center sm:text-start justify-center md:justify-start md:items-start w-full">
               <div>
-                <div className="text-black font-semibold">
-                  HOTELES FÍSICOS. PROPIEDAD DIGITAL.
-                </div>
-                <h1 className="sm:text-6xl min-[350px]:text-5xl text-4xl font-semibold">
-                  {translateText({ text: "La nueva forma de" })}
+                <h1 className="sm:text-5xl min-[350px]:text-5xl text-4xl font-semibold">
+                  {translateText({ text: "Diversifica tu portafolio" })}
                 </h1>
-                <h1 className="font-semibold text-transparent sm:text-6xl min-[350px]:text-5xl text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 opacity-90">
-                  {translateText({ text: "invertir en hoteles" })}
+                <h1 className="font-semibold text-transparent sm:text-5xl min-[350px]:text-5xl text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 opacity-90">
+                  {translateText({ text: "invertiendo en hoteles" })}
                 </h1>
                 <p className="sm:text-lg mt-3 md:w-[90%] text-xs font-light text-gray-600 ">
                   {translateText({
@@ -101,13 +98,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col max-w-7xl mx-auto xl:ml-20 gap-10">
+      <div className="flex flex-col  mx-auto px-20 gap-10">
         <div className="font-semibold sm:text-3xl min-[350px]:text-2xl text-xl text-center sm:text-start ">
           {translateText({
             text: "Plataforma #1 de tokenización hotelera",
           })}
         </div>
-        <div className="flex sm:flex-row flex-col sm:text-start text-center items-center gap-10">
+        <div className="flex sm:flex-row flex-col sm:text-start text-center items-center w-full justify-between">
           {[
             [
               `${translateText({
@@ -296,7 +293,7 @@ export default function Home() {
           })}{" "}
         </div>
         <div className="flex flex-col gap-10">
-          <div className="flex lg:flex-row flex-col items-center lg:items-start lg:gap-3 gap-16">
+          <div className="flex lg:flex-row flex-col items-center lg:items-start lg:gap-3 justify-between">
             <div className="xl:w-[600px] w-[550px] bg-gradient-to-tr rounded-lg  h-[400px]">
               <div className="flex flex-col items-center lg:items-start h-[400px] p-3 gap-3">
                 {[

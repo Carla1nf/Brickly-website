@@ -75,7 +75,7 @@ export default function Form() {
             }`}
             onClick={() => handleSubmit()}
           >
-            {`${translateText({ text: "Pre-registrate" })}`}{" "}
+            {`${translateText({ text: "Suscribirse" })}`}{" "}
             {isSubmitting ? (
               <img
                 src="universal/spinner.svg"
