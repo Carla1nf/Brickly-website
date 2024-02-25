@@ -43,7 +43,7 @@ export default function Form() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="E-mail"
           type="email"
-          className=" px-4 py-4  rounded-xl bg-gray-100 animate-enter-token delay-100 fill-mode-forwards opacity-0"
+          className=" px-4 py-4 rounded-xl bg-gray-100 animate-enter-token delay-100 fill-mode-forwards opacity-0"
         />
         <input
           value={name}

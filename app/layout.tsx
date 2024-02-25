@@ -32,6 +32,26 @@ export default function RootLayout({
         ></script>
 
         <script
+          dangerouslySetInnerHTML={{
+            __html: `  window.intercomSettings = {
+            api_base: "https://api-iam.intercom.io",
+            app_id: "c92gzs5q",
+            name: user.name, // Full name
+            user_id: user.id, // a UUID for your user
+            email: user.email, // the email for your user
+            created_at: user.createdAt // Signup date as a Unix timestamp
+          };`,
+          }}
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/c92gzs5q';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+`,
+          }}
+        ></script>
+
+        <script
           id="google-analytics"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
@@ -50,11 +70,6 @@ export default function RootLayout({
             <Nav />
             <main className="scroll-smooth flex min-h-screen overflow-x-hidden flex-col py-16 sm:px-12 grow">
               {children}
-              <div className="fixed bottom-5 right-10  h-20 w-20">
-                <a href="https://wa.me/41782053094" target="_blank">
-                  <img src="universal/whatsappLogo.svg" width={50} />
-                </a>
-              </div>
             </main>
             <footer className="p-8 z-50 text-center lg:h-72 bg-brickly50/70 ">
               <Component />
