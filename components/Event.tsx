@@ -1,5 +1,6 @@
 "use client";
 
+import { translateText } from "@/lib/translate";
 import { ReactNode } from "react";
 
 const Event = ({
@@ -50,7 +51,7 @@ const Event = ({
         {getSymbol()}
         <div className="flex flex-col">
           <div className="font-semibold text-sm flex items-center gap-4">
-            {title}
+            {translateText({ text: title })}
             <p className="text-gray-400 text-[13px] ">
               <a
                 href={extra}

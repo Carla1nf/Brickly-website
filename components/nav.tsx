@@ -59,7 +59,10 @@ function Nav() {
           />
           <div className="w-6">{activeLenguage}</div>
           <div className="absolute group-hover:flex   hidden right-0 z-10 mt-6 w-40 p-3 flex-col gap-4 bg-neutral-50 shadow-lg rounded-lg">
-            {[["ES", "Español"]].map((item) => {
+            {[
+              ["ES", "Español"],
+              ["EN", "English"],
+            ].map((item) => {
               return (
                 <div
                   onClick={() => {
@@ -307,7 +310,10 @@ function Nav() {
           />
           <div className="w-6">{activeLenguage}</div>
           <div className="absolute group-hover:flex hidden right-0 z-10 mt-6 w-40 p-3 flex-col gap-4 bg-neutral-50 shadow-lg rounded-lg">
-            {[["ES", "Español"]].map((item) => {
+            {[
+              ["ES", "Español"],
+              ["EN", "English"],
+            ].map((item) => {
               return (
                 <div
                   onClick={() => {
@@ -350,7 +356,7 @@ function Nav() {
             className="md:flex hidden px-6"
           >
             <div className="bg-black/90 px-3 py-2 rounded text-white font-normal cursor-pointer hover:scale-[0.97]">
-              Conectarse
+              {translateText({ text: "Conectarse" })}
             </div>
           </a>
         </ShowWhenTrue>

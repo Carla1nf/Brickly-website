@@ -14,7 +14,7 @@ export function useManageLenguage() {
 }
 
 export function Lenguage({ children }: { children: React.ReactNode }) {
-  const [lenguage, setLenguage] = useState<string>("ES");
+  const [lenguage, setLenguage] = useState<string>("EN");
   // time now
   const mangeLenguage = (newLenguage: string) => {
     setLenguage(newLenguage);

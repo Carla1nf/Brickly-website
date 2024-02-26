@@ -19,6 +19,7 @@ import ConnectYourWallet from "@/components/connectWallet";
 import axios from "axios";
 import { fromDecimals } from "@/lib/erc20";
 import { INTERNAL_TOKENS } from "@/lib/token";
+import { translateText } from "@/lib/translate";
 
 export default function PanelPage() {
   const userAddress = useAddressContext();
@@ -88,11 +89,17 @@ export default function PanelPage() {
 
           <div className="flex md:flex-row flex-col gap-8 w-full px-6 sm:px-12 md:px-0">
             <div className="bg-neutral-50 shadow p-5 flex gap-5 flex-col rounded md:w-2/3 lg:h-80">
-              <div className="font-semibold">Tus inversiones</div>
+              <div className="font-semibold">
+                {translateText({ text: "Tus inversiones" })}
+              </div>
               <div className=" font-semibold text-gray-400 text-sm border-b hidden md:flex border-gray-200 pb-2">
                 <div className="w-1/3">Hotel</div>
-                <div className="w-1/3">Invertido</div>
-                <div className="w-1/3">Proceso</div>
+                <div className="w-1/3">
+                  {translateText({ text: "Tus inversiones" })}
+                </div>
+                <div className="w-1/3">
+                  {translateText({ text: "Proceso" })}
+                </div>
               </div>
               <InvestmentRow houseID={1} />
               <ShowWhenTrue when={allPaymentsUser.length == 0}>
@@ -103,12 +110,16 @@ export default function PanelPage() {
                 when={allPaymentsUser.length > 0 && inversionTotal == 0}
               >
                 <div className="text-center text-gray-400 mt-5">
-                  Tus inversiones estan siendo procesadas...
+                  {translateText({
+                    text: "Tus inversiones estan siendo procesadas...",
+                  })}
                 </div>
               </ShowWhenTrue>
             </div>
             <div className="bg-neutral-50 shadow p-5 flex flex-col rounded lg:w-[32%] gap-6">
-              <div className="font-semibold">Eventos</div>
+              <div className="font-semibold">
+                {translateText({ text: "Eventos" })}
+              </div>
               <div className="flex flex-col justify-center items-center">
                 <ShowWhenTrue when={allPaymentsUser.length == 0}>
                   <div className="text-center text-gray-400 mt-5">

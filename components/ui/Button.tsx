@@ -1,3 +1,4 @@
+import { translateText } from "@/lib/translate";
 import { ShowWhenTrue } from "../conditionals";
 import { SpinnerIcon } from "../icons";
 
@@ -26,7 +27,7 @@ export default function CustomButton({
         radix-state-on:bg-gray-50 dark:radix-state-on:bg-gray-900
         radix-state-instant-open:bg-gray-50 radix-state-delayed-open:bg-gray-50"
       >
-        {content}
+        {translateText({ text: content })}
         <ShowWhenTrue when={loading ?? false}>
           <SpinnerIcon className=" animate-spin w-3" />
         </ShowWhenTrue>

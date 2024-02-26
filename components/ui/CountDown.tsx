@@ -45,7 +45,6 @@ const CountdownTimer = () => {
   return (
     <>
       {timeRemaining.days}d {timeRemaining.hours}h {timeRemaining.minutes}m{" "}
-      {timeRemaining.seconds}s
     </>
   );
 };

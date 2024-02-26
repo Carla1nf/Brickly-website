@@ -34,11 +34,7 @@ export default function Home() {
 
               <div className="flex sm:flex-row flex-col sm:space-x-4 sm:gap-0 md:items-start items-center gap-5 max-w-92">
                 <Link href={"marketplace"} shallow>
-                  <CustomButton
-                    content={`${translateText({
-                      text: "Inverti ahora",
-                    })}`}
-                  />
+                  <CustomButton content={`Inverti ahora`} />
                 </Link>
 
                 <Button
@@ -212,7 +208,7 @@ export default function Home() {
           <>
             <div className=" font-semibold  sm:text-3xl min-[350px]:text-2xl text-xl">
               {translateText({
-                text: "Hoteles en preparación",
+                text: "Barcelona Castelldefels - Hotel",
               })}
             </div>
             <div className="text-gray-400 sm:text-base text-sm w-[85vw] sm:w-auto">
@@ -293,7 +289,7 @@ export default function Home() {
           })}{" "}
         </div>
         <div className="flex flex-col gap-10">
-          <div className="flex lg:flex-row flex-col items-center lg:items-start lg:gap-3 justify-between">
+          <div className="flex lg:flex-row flex-col items-center  justify-between">
             <div className="xl:w-[600px] w-[550px] bg-gradient-to-tr rounded-lg  h-[400px]">
               <div className="flex flex-col items-center lg:items-start h-[400px] p-3 gap-3">
                 {[
@@ -341,7 +337,7 @@ export default function Home() {
                 })}
               </div>
             </div>
-            <div className="w-[450px] items-center justify-center flex relative bg-gradient-to-tr rounded-lg h-[450px] -mt-16">
+            <div className="w-[450px] items-center justify-center flex relative bg-gradient-to-tr rounded-lg h-[450px] -mt-16  md:-mt-36">
               <img
                 className=" shadow-2xl lg:absolute"
                 src="https://hotel-1-fotos.s3.amazonaws.com/Prueba-1-min.png"

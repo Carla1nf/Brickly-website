@@ -17,6 +17,7 @@ import { SpinnerIcon } from "@/components/icons";
 import CountdownTimer from "@/components/ui/CountDown";
 import Calculator from "@/components/calculator";
 import { useHotelBlockchainData, useKYC } from "@/context/conne";
+import { translateText } from "@/lib/translate";
 
 export default function InvestPage() {
   const [hotelOffer, setHotelOffer] = useState<GetData>();
@@ -134,7 +135,9 @@ export default function InvestPage() {
           <div className="flex flex-col lg:flex-row justify-between md:items-start text-center  space-y-4 lg:space-y-0 lg:space-x-8">
             <div>
               <h1 className="text-3xl  font-semibold text-gray-900">
-                Castelldefels, Barcelona Hotel - 1º Habitación
+                {translateText({
+                  text: "Castelldefels, Barcelona Hotel - 1º Habitación",
+                })}
               </h1>
               <div className="mt-1 text-base text-gray-600 flex md:justify-start justify-center gap-2">
                 secured by Hotelier Services{" "}
@@ -188,7 +191,9 @@ export default function InvestPage() {
                 ["Localidad", hotelOffer?.Localidad],
               ].map((item, index) => (
                 <div className="flex-col flex p-5 gap-2 px-8">
-                  <div className="text-black font-semibold">{item[0]}</div>
+                  <div className="text-black font-semibold">
+                    {translateText({ text: item[0] as string })}
+                  </div>
                   <div className="flex gap-1">
                     {" "}
                     <img src="/home/icons/building.svg" width="20" />
@@ -202,21 +207,20 @@ export default function InvestPage() {
               ))}
             </div>
             <div className="flex flex-col gap-5">
-              <div className=" font-semibold text-xl">Sobre este hotel</div>
+              <div className=" font-semibold text-xl">
+                {translateText({ text: "Sobre este hotel" })}
+              </div>
               <div className="xl:w-[780px]">
-                Ubicado a pocos pasos de las doradas playas de Castelldefels,
-                Hotel Castelldefels se erige como un refugio de serenidad en
-                medio de la energía vibrante de esta encantadora localidad
-                costera. Nuestras habitaciones, meticulosamente diseñadas,
-                reflejan un estilo moderno y acogedor, brindando un espacio
-                donde puedes relajarte.
+                {translateText({
+                  text: `Ubicado a pocos pasos de las doradas playas de Castelldefels, Hotel Castelldefels se erige como un refugio de serenidad en medio de la energía vibrante de esta encantadora localidad costera. Nuestras habitaciones, meticulosamente diseñadas, reflejan un estilo moderno y acogedor, brindando un espacio donde puedes relajarte.`,
+                })}
               </div>
             </div>
 
             <div className="flex gap-5 p-5 h-full w-full bg-brickly50/70 rounded-xl border-2 border-brickly100 ">
               <div className="flex w-full flex-col gap-5">
                 <div className="text-neutral-700 font-semibold">
-                  Dueño del hotel
+                  {translateText({ text: "Dueño del hotel" })}
                 </div>
                 <div className="flex gap-3 md:flex-row flex-col">
                   <div className="flex gap-2">
@@ -231,7 +235,7 @@ export default function InvestPage() {
                   <div className="justify-self-end md:w-1/2 flex  md:justify-end gap-5 items-center">
                     <a href="https://hotelierservices.com/" target="_blank">
                       <div className="bg-black h-10 w-32 bg-brickly400/30 rounded flex justify-center text-brickly700 font-semibold items-center text-sm">
-                        Página web
+                        Web
                       </div>
                     </a>
                     <a
@@ -252,7 +256,7 @@ export default function InvestPage() {
               <div className="flex gap-3">
                 <div className="flex-col flex w-full">
                   <div className=" text-sm text-gray-500">
-                    Interes aproximado
+                    {translateText({ text: "Interes estimado" })}
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-500">
                     {" "}
@@ -270,7 +274,9 @@ export default function InvestPage() {
                   </div>
                 </div>
                 <div className="flex-col flex justify-center items-end w-full">
-                  <div className=" text-sm text-gray-500">Tiempo restante</div>
+                  <div className=" text-sm text-gray-500">
+                    {translateText({ text: "Tiempo restante" })}
+                  </div>
                   <div className="flex items-center gap-2 text-sm text-gray-500">
                     <div className=" font-extrabold text-xl text-brickly400 flex gap-2">
                       <CountdownTimer />
@@ -285,7 +291,8 @@ export default function InvestPage() {
                   onClick={() => (connect ? connect() : "")}
                 >
                   <div className=" bg-brickly400 rounded-lg font-semibold hover:scale-[1.01] cursor-pointer transition-all py-3 text-center text-white shadow-xl flex items-center gap-3 justify-center">
-                    Conecta tu cuenta
+                    {translateText({ text: "Conecta tu cuenta" })}
+
                     <ShowWhenTrue when={connecting}>
                       <SpinnerIcon className=" animate-spin-slow w-4 h-4" />
                     </ShowWhenTrue>
@@ -297,7 +304,7 @@ export default function InvestPage() {
                 <Link href="/user">
                   <div className="h-20  border-b-2 border-b-brickly400/20">
                     <div className=" bg-brickly400 rounded-lg font-semibold hover:scale-[1.01] cursor-pointer transition-all py-3 text-center text-white shadow-xl ">
-                      Verifica tu identidad
+                      {translateText({ text: "Verifica tu identidad" })}
                     </div>
                   </div>
                 </Link>
@@ -311,7 +318,7 @@ export default function InvestPage() {
                       target=" _blank"
                       href={`https://buy.stripe.com/5kA6sr2zJg7NfeM4gh?prefilled_email=${info.email}`}
                     >
-                      Invertir ahora
+                      {translateText({ text: "Invertir ahora" })}
                     </a>
                   </div>
                 </div>
@@ -319,7 +326,9 @@ export default function InvestPage() {
             </div>
 
             <div className="flex-col flex p-5  gap-2 -mt-3 ">
-              <div className=" text-sm text-gray-500">Recaudación total</div>
+              <div className=" text-sm text-gray-500">
+                {translateText({ text: "Recaudación total" })}
+              </div>
               <div className="flex flex-col gap-3">
                 <div className="relative bg-gray-100 w-full h-4 rounded-lg">
                   <div
@@ -356,16 +365,20 @@ export default function InvestPage() {
               </div>
             </div>
             <div className="flex-col flex p-5  gap-1 ">
-              <div className=" font-semibold">Solicita una reunión online</div>
+              <div className=" font-semibold">
+                {translateText({ text: "Solicita una reunión online" })}
+              </div>
               <div className="text-gray-500 text-sm ">
-                Es gratis y sin obligación ━ puedes cancelarla cuando quieras
+                {translateText({
+                  text: "Es gratis y sin obligación ━ puedes cancelarla cuando quieras",
+                })}
               </div>
               <a
                 href="https://calendly.com/juanignacio-brick-ly/30min"
                 target="_blank"
               >
                 <div className=" bg-black/60 rounded-lg font-semibold hover:scale-[1.01] cursor-pointer transition-all py-3 text-center text-white mt-2">
-                  Solicitar reunión
+                  {translateText({ text: "Solicitar reunión" })}
                 </div>
               </a>
             </div>
@@ -374,19 +387,21 @@ export default function InvestPage() {
         <div className="max-w-9xl py-5 flex   xl:flex-row flex-col xl:gap-12 md:gap-0 gap-12 ">
           <div className="md:h-96 md:text-start  w-full flex ">
             <div className="flex flex-col w-full gap-10">
-              <div className=" font-semibold text-xl">Caracteristicas</div>
+              <div className=" font-semibold text-xl">
+                {translateText({ text: "Caracteristicas" })}
+              </div>
               <div className="flex flex-col md:flex-row gap-10">
                 <div className="flex flex-col gap-5 w-full ">
                   {[
-                    ["Inversión minimo", "USD 100"],
-                    ["Rentabilidad  anual", "8,32%"],
+                    ["Inversión minima", "USD 100"],
+                    ["Rentabilidad anual", "8,32%"],
                     ["Inicio Renta", "15/04/2024"],
                     ["Fin Renta", "04/2029"],
                     ["Blockchain", "Polygon"],
                   ].map((item) => (
                     <div className="flex gap-2 items-end justify-end md:justify-start">
                       <div className="text-gray-500 w-full md:w-56">
-                        {item[0]}
+                        {translateText({ text: item[0] })}
                       </div>{" "}
                       <div className=" font-semibold   justify-end flex items-end md:w-32 w-full  ">
                         {item[1]}
@@ -405,7 +420,7 @@ export default function InvestPage() {
                   ].map((item) => (
                     <div className="flex gap-2 items-end justify-end md:justify-start">
                       <div className="text-gray-500 w-full md:min-w-56">
-                        {item[0]}
+                        {translateText({ text: item[0] })}
                       </div>{" "}
                       <div className=" font-semibold   justify-end flex items-end md:min-w-32 w-full  ">
                         {item[1]}

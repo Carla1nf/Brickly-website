@@ -1,5 +1,6 @@
 "use client";
 
+import { translateText } from "@/lib/translate";
 import { useRef, useState } from "react";
 
 export default function Calculator({ interest }: { interest: number }) {
@@ -10,9 +11,11 @@ export default function Calculator({ interest }: { interest: number }) {
   return (
     <div className="border-2 border-brickly100 w-full rounded-xl h-[300px] p-5 flex flex-col gap-5">
       {" "}
-      <div className=" text-sm text-gray-500">Calculadora retorno</div>
+      <div className=" text-sm text-gray-500">
+        {translateText({ text: "Calculadora retorno" })}
+      </div>
       <div className="flex flex-col gap-4 font-semibold">
-        Inversión USD:
+        {translateText({ text: "Inversión USD:" })}
         <input
           className="border px-4 py-1 bg-brickly100/50 font-semibold text-lg border-brickly100 rounded"
           placeholder="USD"
@@ -27,21 +30,27 @@ export default function Calculator({ interest }: { interest: number }) {
       </div>
       <div className="flex flex-col gap-3">
         <div className="flex justify-end items-center">
-          <div className="text-sm w-full">Ganancia total</div>
+          <div className="text-sm w-full">
+            {translateText({ text: "Ganancia total" })}
+          </div>
           <div className="text-lg text-green-900  font-semibold px-2 w-full justify-end flex">
             USD {(anualInterest * 5).toFixed(2)}
           </div>
         </div>
 
         <div className="flex justify-end items-center">
-          <div className="text-sm w-full">Ganancia anual</div>
+          <div className="text-sm w-full">
+            {translateText({ text: "Ganancia anual" })}
+          </div>
           <div className="text-lg text-green-900  font-semibold px-2 w-full justify-end flex">
             USD {anualInterest.toFixed(2)}
           </div>
         </div>
 
         <div className="flex justify-end items-center">
-          <div className="text-sm w-full">Monto final</div>
+          <div className="text-sm w-full">
+            {translateText({ text: "Monto final" })}
+          </div>
           <div className="text-base text-green-900  font-semibold px-2 w-full justify-end flex">
             USD {(anualInterest * 5 + investment).toFixed(2)}
           </div>
