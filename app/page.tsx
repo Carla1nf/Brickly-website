@@ -19,12 +19,12 @@ export default function Home() {
           <div className="xl:ml-16 flex-col md:flex md:flex-row  items-center">
             <div className="space-y-5 grid items-center text-center sm:text-start justify-center md:justify-start md:items-start w-full">
               <div>
-                <h1 className="sm:text-5xl min-[350px]:text-5xl text-4xl font-semibold">
+                <div className="sm:text-5xl min-[350px]:text-5xl text-4xl font-semibold">
                   {translateText({ text: "Diversifica tu portafolio" })}
-                </h1>
-                <h1 className="font-semibold text-transparent sm:text-5xl min-[350px]:text-5xl text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 opacity-90">
+                </div>
+                <div className="font-semibold h-14 text-transparent sm:text-5xl min-[350px]:text-5xl text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 ">
                   {translateText({ text: "invirtiendo en hoteles" })}
-                </h1>
+                </div>
                 <p className="sm:text-lg mt-3 md:w-[90%] text-xs font-light text-gray-600 ">
                   {translateText({
                     text: "Brickly es la forma más rentable y facil de invertir en propiedad de renta turistica.",
@@ -289,8 +289,8 @@ export default function Home() {
           })}{" "}
         </div>
         <div className="flex flex-col gap-10">
-          <div className="flex lg:flex-row flex-col items-center  justify-between">
-            <div className="xl:w-[600px] w-[550px] bg-gradient-to-tr rounded-lg  h-[400px]">
+          <div className="flex lg:flex-row flex-col items-center justify-between w-full">
+            <div className="xl:w-[600px] w-[550px] bg-gradient-to-tr rounded-lg h-[400px]">
               <div className="flex flex-col items-center lg:items-start h-[400px] p-3 gap-3">
                 {[
                   [
