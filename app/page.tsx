@@ -4,14 +4,10 @@ import CountdownTimer from "@/components/ui/CountDown";
 import { translateText } from "@/lib/translate";
 import { Button } from "@radix-ui/themes";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import React from "react";
-import { revalidatePath } from "next/cache";
+import React, { useEffect } from "react";
 import Form from "@/components/form";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <div>
       <div className="bg-gradient-radial font-sans w-screen bg-[radial-gradient(50.40%_43.55%_at_50.66%_46.29%,rgba(255,98,28,0.2)_10%,rgba(255,255,255,1)_100%)] md:h-[70vh] h-auto">

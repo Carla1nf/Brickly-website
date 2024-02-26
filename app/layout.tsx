@@ -30,16 +30,55 @@ export default function RootLayout({
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-XQH33W31KN"
         ></script>
-
         <script
           dangerouslySetInnerHTML={{
-            __html: `  window.intercomSettings = {
+            __html: `   (function () {
+            var w = window;
+            var ic = w.Intercom;
+            if (typeof ic === "function") {
+              ic("reattach_activator");
+              ic("update", w.intercomSettings);
+            } else {
+              var d = document;
+              var i = function () {
+                i.c(arguments);
+              };
+              i.q = [];
+              i.c = function (args) {
+                i.q.push(args);
+              };
+              w.Intercom = i;
+              var l = function () {
+                var s = d.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://widget.intercom.io/widget/your_app_id";
+                var x = d.getElementsByTagName("script")[0];
+                x.parentNode.insertBefore(s, x);
+              };
+              if (w.attachEvent) {
+                w.attachEvent("onload", l);
+              } else {
+                w.addEventListener("load", l, false);
+              }
+            }
+          })();
+      
+          // Call boot method
+          (window as any).Intercom("boot", {
+            app_id: ${process.env.INTERCOMKEY},
+          });`,
+          }}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.intercomSettings = {
             api_base: "https://api-iam.intercom.io",
             app_id: "c92gzs5q",
-            name: user.name, // Full name
-            user_id: user.id, // a UUID for your user
-            email: user.email, // the email for your user
-            created_at: user.createdAt // Signup date as a Unix timestamp
+            name: "There", // Full name
+            user_id: "3", // a UUID for your user
+            email: "", // the email for your user
+            created_at: 1312182000 // Signup date as a Unix timestamp
           };`,
           }}
         ></script>

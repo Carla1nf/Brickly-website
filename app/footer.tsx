@@ -48,6 +48,15 @@ export default function Component() {
             <img src="/universal/Whatsapp.svg" width="25" />
             <span>+54 9 2473-415198</span>
           </div>
+
+          <a
+            className="flex items-center space-x-2 justify-center"
+            href="https://www.google.com/maps/place/Rosenbergstrasse+51,+9000+St.+Gallen/@47.4227104,9.3679353,18.09z/data=!4m6!3m5!1s0x479b1e4a768c8833:0x24c7dd9ff0115a45!8m2!3d47.4234977!4d9.3685944!16s%2Fg%2F11c4wjgnl0?entry=ttu"
+            target="_blank"
+          >
+            <img src="/universal/Maps.svg" width="25" />
+            <span>Rosenbergstrasse 51, St.Gallen </span>
+          </a>
         </div>
         <div className="space-y-4 flex flex-col">
           <h3 className="text-lg font-semibold">
