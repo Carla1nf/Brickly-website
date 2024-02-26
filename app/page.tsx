@@ -23,7 +23,7 @@ export default function Home() {
                   {translateText({ text: "Diversifica tu portafolio" })}
                 </h1>
                 <h1 className="font-semibold text-transparent sm:text-5xl min-[350px]:text-5xl text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 opacity-90">
-                  {translateText({ text: "invertiendo en hoteles" })}
+                  {translateText({ text: "invirtiendo en hoteles" })}
                 </h1>
                 <p className="sm:text-lg mt-3 md:w-[90%] text-xs font-light text-gray-600 ">
                   {translateText({
