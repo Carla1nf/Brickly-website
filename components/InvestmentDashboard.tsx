@@ -12,7 +12,7 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
   const [inversionTotal, setInversionTotal] = useState<any>(null);
   const [informacionHotel, setInformacionHotel] = useState<any>(null);
   const userAddress = useAddressContext();
-  let isOpen = false;
+  let isOpen = true;
 
   const Init = async () => {
     // VER NFT ID
@@ -38,43 +38,20 @@ const InvestmentRow = ({ houseID }: { houseID: number }) => {
   Init();
 
   return (
-    <ShowWhenTrue when={inversionTotal != null}>
+    <ShowWhenTrue when={inversionTotal != null && inversionTotal > 0}>
       <div className="flex flex-col relative hover:bg-neutral-100  px-2 ">
         <div className="flex items-center h-12 ">
-          <div className="w-1/3 flex items-center gap-2 ">
-            <img
-              src={`${
-                houseID == 1
-                  ? "/home/Hotelier.svg"
-                  : `${houseID == 0 ? "/miamihotel.png" : "/parishotel.jpeg"} `
-              }`}
-              height="30"
-              width="30"
-              className="rounded-full"
-            />
-            <div className=" hidden sm:flex">
-              {" "}
-              {houseID == 0
-                ? "Miami Hotel"
-                : houseID == 1
-                ? "Castelldefels hotel"
-                : "Paris hotel"}
-            </div>
+          <div className="w-1/3 flex items-center gap-2">
+            <img src="/home/Hotelier.svg" height="30" width="30" />
+            <div className=" hidden sm:flex"> Castelldefels hotel</div>
           </div>
           <div className="sm:w-1/3 w-full  flex items-center font-semibold text-sm">
-            {/*   USD {Number(inversionTotal).toFixed(2)} */}{" "}
-            {houseID == 2 ? "USD 3.208" : "USD 14.909"}
+            USD {Number(inversionTotal).toFixed(2)}
           </div>
           <div className="sm:w-1/3 w-full  flex flex-col justify-center ">
-            {houseID == 1 ? (
-              <div className="px-2 py-1 text-sm bg-yellow-100 text-yellow-600 rounded font-semibold max-w-min">
-                Recaudando
-              </div>
-            ) : (
-              <div className="px-2 py-1 text-sm bg-green-100 text-green-600 rounded font-semibold max-w-min">
-                Completed
-              </div>
-            )}
+            <div className="px-2 py-1 text-sm bg-yellow-100 text-yellow-600 rounded font-semibold max-w-min">
+              Recaudando
+            </div>
           </div>
           <div className="absolute right-5 flex items-center justify-center">
             <img src="/universal/Down.svg" width="20" />
