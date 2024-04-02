@@ -61,7 +61,7 @@ export default function InvestPage() {
 
   return (
     <>
-      <ShowWhenTrue when={galeriaAbierta}>
+      <ShowWhenTrue when={false}>
         <div className="absolute bg-black/40 top-0 left-0 right-0 bottom-0 z-10">
           <div className="w-full flex items-center justify-center h-screen fixed top-0">
             <div className="bg-white xl:w-[1100px] overflow-hidden w-[80%] h-auto  rounded animate-enter-token shadow-lg">
@@ -157,11 +157,11 @@ export default function InvestPage() {
           </div>
         </div>
 
-        <div className="max-w-9xl py-5 flex gap-5  animate-enter-div">
+        <div className="items-center py-5 flex gap-5  animate-enter-div">
           <img
             onClick={() => setGaleriaAbierta(true)}
             src="https://hotel-1-fotos.s3.amazonaws.com/Foto1-min.png"
-            className="rounded-xl w-[600px] md:h-auto h-96 xl:w-[790px] shadow-xl hover:opacity-90 cursor-pointer hover:scale-[0.98] transition-all"
+            className="rounded-xl w-[600px] md:h-auto h-96 xl:w-[790px] shadow-xl hover:scale-[0.98] transition-all"
           />
 
           <div className="md:flex hidden flex-col gap-5 ">
@@ -169,13 +169,13 @@ export default function InvestPage() {
               onClick={() => setGaleriaAbierta(true)}
               src="https://hotel-1-fotos.s3.amazonaws.com/Foto2.png"
               style={{ width: "420px" }}
-              className="rounded-xl h-[250px] shadow-xl hover:opacity-90 cursor-pointer hover:scale-[0.98] transition-all"
+              className="rounded-xl h-[250px] shadow-xl hover:scale-[0.98] transition-all"
             />
             <img
               onClick={() => setGaleriaAbierta(true)}
               src="https://hotel-1-fotos.s3.amazonaws.com/Foto3.png"
               style={{ width: "420px" }}
-              className="rounded-xl h-[250px] shadow-xl hover:opacity-90 cursor-pointer hover:scale-[0.98] transition-all"
+              className="rounded-xl h-[250px] shadow-xl hover:scale-[0.98] transition-all"
             />
           </div>
         </div>
@@ -316,7 +316,7 @@ export default function InvestPage() {
                     <a
                       className="w-full h-full"
                       target=" _blank"
-                      href={`https://buy.stripe.com/5kA6sr2zJg7NfeM4gh?prefilled_email=${info.email}`}
+                      href={`https://buy.stripe.com/test_bIY8A25ZbgUO8co8ww`}
                     >
                       {translateText({ text: "Invertir ahora" })}
                     </a>
@@ -374,7 +374,7 @@ export default function InvestPage() {
                 })}
               </div>
               <a
-                href="https://calendly.com/juanignacio-brick-ly/30min"
+                href="https://calendly.com/gonzalo-80/30min?back=1&month=2024-04"
                 target="_blank"
               >
                 <div className=" bg-black/60 rounded-lg font-semibold hover:scale-[1.01] cursor-pointer transition-all py-3 text-center text-white mt-2">

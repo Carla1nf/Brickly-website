@@ -20,6 +20,7 @@ export function BlockchainData({ children }: { children: React.ReactNode }) {
   const [hotelBlockcahainData, setHotelBlockchainData] = useState<any>(false);
 
   const userAddress = useAddressContext();
+  console.log(userAddress);
 
   const initBlockchainData = async () => {
     const blockchainData = (await useBlockchainData(1, userAddress)) as any;

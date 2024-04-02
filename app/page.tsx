@@ -364,14 +364,6 @@ export default function Home() {
               })}`,
               "https://hotelierservices.com/",
             ],
-            [
-              "Start Fellowship",
-              `${translateText({ text: "Suiza" })}`,
-              `${translateText({
-                text: "Impulsa y capacita a la próxima generación de empresarios para que todos tengan la oportunidad de estar en el lugar adecuado en el momento adecuado. A través de eventos anuales facilita conexiones entre jóvenes empresarios, inversores líderes y mentores globales.",
-              })}`,
-              "https://www.startglobal.org/start-fellowship",
-            ],
           ].map((alianza, index) => {
             return (
               <a href={`${alianza[3]}`} target="_blank">

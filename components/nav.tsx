@@ -20,7 +20,6 @@ function Nav() {
   const activeLenguage = UseLenguage();
   const connect = useConnectContext();
   const info = useConnection() as any;
-  const connecting = useIsConnecting();
 
   const bricklyTelegram = "https://t.me/bricklytelegram";
   const bricklyTwitter = "https://twitter.com/BricklyApp";
@@ -267,7 +266,7 @@ function Nav() {
                       role="menuitem"
                       id="menu-item-1"
                     >
-                      Likendin
+                      Linkedin
                     </a>
                   </div>
                 </div>

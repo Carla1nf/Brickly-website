@@ -70,7 +70,7 @@ export default function PanelPage() {
       <ShowWhenTrue when={userAddress != "" && !loading}>
         <div className="flex flex-col items-center md:pr-5 gap-8">
           <div className="flex md:flex-row flex-col w-10/12 md:w-full md:gap-6 gap-2">
-            <Stat
+            {/*   <Stat
               value={`${rentaSinReclamar.toFixed(2)}`}
               title={"Renta generada"}
               extra="USD"
@@ -84,7 +84,11 @@ export default function PanelPage() {
               value={`${inversionTotal.toFixed(2)}`}
               title={"Inversión total"}
               extra="USD"
-            />
+            /> */}
+
+            <Stat value={`$2.302`} title={"Renta generada"} extra="USD" />
+            <Stat value={`$9.320`} title={"Ganancia reclamada"} extra="USD" />
+            <Stat value={`$90.779`} title={"Inversión total"} extra="USD" />
           </div>
 
           <div className="flex md:flex-row flex-col gap-8 w-full px-6 sm:px-12 md:px-0">
@@ -101,13 +105,18 @@ export default function PanelPage() {
                   {translateText({ text: "Proceso" })}
                 </div>
               </div>
+              <InvestmentRow houseID={0} />
+              <InvestmentRow houseID={2} />
               <InvestmentRow houseID={1} />
+
               <ShowWhenTrue when={allPaymentsUser.length == 0}>
                 <div className="text-center text-gray-400 mt-5"></div>
               </ShowWhenTrue>
 
               <ShowWhenTrue
-                when={allPaymentsUser.length > 0 && inversionTotal == 0}
+                when={
+                  allPaymentsUser.length > 0 && inversionTotal == 0 && false
+                }
               >
                 <div className="text-center text-gray-400 mt-5">
                   {translateText({
